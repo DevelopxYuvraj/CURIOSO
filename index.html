@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CURIOSO - Learn India Through Play</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            CURIOSO 🇮🇳
+        </div>
+
+        <button onclick="startLearning()">
+            Start Learning
+        </button>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                🎮 Learn India through Play
+            </span>
+
+            <h1>
+                Discover India's Culture.
+                <br>
+                Play. Learn. Explore.
+            </h1>
+
+            <p>
+                Explore Indian festivals, art, dance,
+                monuments, history and regional heritage
+                through interactive quizzes and games.
+            </p>
+
+            <button onclick="exploreCulture()">
+                Explore Culture →
+            </button>
+
+        </div>
+
+
+        <div class="india-card">
+
+            <h3>
+                YOUR INDIA JOURNEY
+            </h3>
+
+            <div class="india-icon">
+                🇮🇳
+            </div>
+
+            <p>
+                28 States • Culture • History • Heritage
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPLORE -->
+
+    <section id="explore">
+
+        <h2>
+            Explore India
+        </h2>
+
+        <p class="subtitle">
+            Choose a topic and start your learning journey.
+        </p>
+
+
+        <div class="culture-map-entry">
+
+            <div class="culture-map-copy">
+                <span class="culture-map-kicker">🗺️ NEW • DISCOVER BY STATE</span>
+                <h3>Explore India's Culture Map</h3>
+                <p>Pick a state and discover its festivals, art, dance and heritage.</p>
+            </div>
+
+            <a href="culture-map.html" class="culture-map-link">
+                Explore the Map →
+            </a>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <a href="festival.html" class="btn">
+
+                <div class="card">
+
+                    <div class="icon">🎉</div>
+
+                    <h3>Festivals</h3>
+
+                    <p>
+                        Discover celebrations and traditions
+                        from different regions.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="Art&Crafts.html" class="btn">
+
+                <div class="card">
+
+                    <div class="icon">🎨</div>
+
+                    <h3>Art & Crafts</h3>
+
+                    <p>
+                        Explore traditional art forms
+                        and handicrafts.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="Dance.html" class="btn">
+
+                <div class="card">
+
+                    <div class="icon">💃</div>
+
+                    <h3>Dance Forms</h3>
+
+                    <p>
+                        Learn about India's diverse
+                        traditional dances.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="Heritage.html" class="btn">
+
+                <div class="card">
+
+                    <div class="icon">🏛️</div>
+
+                    <h3>Heritage</h3>
+
+                    <p>
+                        Discover monuments and
+                        regional heritage.
+                    </p>
+
+                </div>
+
+            </a>
+   <a href="games/index.html" class="curioso-games-btn">
+    <span class="games-icon">🎮</span>
+
+    <span class="games-content">
+        <span class="games-label">PLAY & LEARN</span>
+        <span class="games-title">CURIOSO GAMES</span>
+    </span>
+
+    <span class="games-arrow">→</span>
+</a>   
+
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section class="quiz-section" id="quiz">
+
+        <h2>
+            🎯 Quick Culture Quiz
+        </h2>
+
+        <p class="subtitle">
+            Test your knowledge and earn points.
+        </p>
+
+
+        <div class="quiz">
+
+
+            <div class="quiz-top">
+
+                <span id="questionNumber">
+                    Question 1 / 50
+                </span>
+
+            </div>
+
+
+            <h3 id="question">
+                Loading question...
+            </h3>
+
+
+            <div class="options" id="options">
+
+                <!-- JavaScript options add karega -->
+
+            </div>
+
+
+            <div id="result"></div>
+
+
+            <button
+                id="nextButton"
+                onclick="nextQuestion()"
+                style="
+                    display:none;
+                    margin-top:18px;
+                    padding:13px 22px;
+                    border:none;
+                    border-radius:12px;
+                    background:#236b55;
+                    color:white;
+                    font-weight:bold;
+                    cursor:pointer;
+                ">
+
+                Next Question →
+
+            </button>
+
+
+            <div class="stats">
+
+
+                <div>
+
+                    <strong id="points">
+                        0
+                    </strong>
+
+                    <span>
+                        Points
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="level">
+                        1
+                    </strong>
+
+                    <span>
+                        Level
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="badgeIcon">
+                        🏆
+                    </strong>
+
+                    <span>
+                        Badge
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- BADGE -->
+
+    <section class="progress">
+
+        <h2>
+            🏆 Your Progress
+        </h2>
+
+        <p class="subtitle">
+            Complete challenges to unlock badges.
+        </p>
+
+        <div class="badge">
+            🥇
+        </div>
+
+        <h3>
+            Culture Explorer
+        </h3>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        CURIOSO — Learn India through Play
+
+        <br><br>
+
+        SIH 2026 Prototype
+
+    </footer>
+
+
+
+    <!-- ================================
+         CURIOSO AI CHATBOT
+    ================================= -->
+
+
+    <div id="chatbotContainer">
+
+
+        <div class="chatbot-header">
+
+
+            <div>
+
+                <h3 class="chatbot-title">
+                    Curioso AI
+                </h3>
+
+                <p class="chatbot-subtitle">
+                    Indian Culture Assistant
+                </p>
+
+            </div>
+
+
+            <button id="chatbotClose">
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <div id="chatbotMessages">
+
+
+            <div class="chat-message bot-message">
+
+                Namaste! 🙏 I'm Curioso AI.
+                Ask me anything about Indian history,
+                festivals, dance, culture, art & crafts
+                or heritage.
+
+            </div>
+
+
+
+            <div class="chatbot-suggestions">
+
+
+                <button
+                    class="chatbot-suggestion"
+                    onclick="askSuggestion('Tell me about Diwali')">
+
+                    🪔 Diwali
+
+                </button>
+
+
+                <button
+                    class="chatbot-suggestion"
+                    onclick="askSuggestion('Tell me about Indian classical dance')">
+
+                    💃 Dance
+
+                </button>
+
+
+                <button
+                    class="chatbot-suggestion"
+                    onclick="askSuggestion('Tell me about the Taj Mahal')">
+
+                    🏛️ Heritage
+
+                </button>
+
+
+                <button
+                    class="chatbot-suggestion"
+                    onclick="askSuggestion('Tell me about Indian art and crafts')">
+
+                    🎨 Art & Crafts
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="chatbot-input-area">
+
+
+            <input
+                type="text"
+                id="chatbotInput"
+                placeholder="Ask about Indian culture..."
+                autocomplete="off"
+            >
+
+
+            <button id="chatbotSend">
+                ➤
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FLOATING CHATBOT BUTTON -->
+
+    <button
+        id="chatbotToggle"
+        title="Open Curioso AI">
+
+        🤖
+
+    </button>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+    <script src="chatbot.js"></script>
+
+
+</body>
+
+</html>

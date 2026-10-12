@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kancha 🟤 | CURIOSO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="kancha.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">CURIOSO</div>
+
+    <div class="game-title">
+        🟤 <span>Kancha</span>
+    </div>
+
+    <a href="games.html" class="back-btn">
+        ← Back to Games
+    </a>
+
+</header>
+
+
+<main class="page">
+
+    <section class="intro">
+
+        <div>
+            <span class="eyebrow">AIM • SKILL</span>
+
+            <h1>Kancha 🟤</h1>
+
+            <p>
+                Aim carefully, control your shot and knock the target
+                marbles out of the circle before the computer does.
+            </p>
+        </div>
+
+        <div class="difficulty-box">
+
+            <label for="difficulty">
+                Difficulty
+            </label>
+
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <section class="game-layout">
+
+        <div class="game-card">
+
+            <div class="hud">
+
+                <div class="hud-item">
+                    <span>Score</span>
+                    <strong id="score">0</strong>
+                </div>
+
+                <div class="hud-item">
+                    <span>Lives</span>
+                    <strong id="lives">❤️❤️❤️</strong>
+                </div>
+
+                <div class="hud-item">
+                    <span>Targets</span>
+                    <strong id="targets">8</strong>
+                </div>
+
+                <div class="hud-item">
+                    <span>Turn</span>
+                    <strong id="turn">YOU</strong>
+                </div>
+
+            </div>
+
+
+            <div class="canvas-wrap">
+
+                <canvas id="gameCanvas"></canvas>
+
+                <div id="startScreen" class="start-screen">
+
+                    <div class="start-icon">
+                        🟤
+                    </div>
+
+                    <h2>Ready to Play?</h2>
+
+                    <p>
+                        Drag from your shooter marble to aim.
+                        Release to shoot.
+                    </p>
+
+                    <button id="startBtn" class="primary-btn">
+                        Start Game
+                    </button>
+
+                    <small>
+                        Mouse / Touch supported
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="shot-info">
+
+                <div>
+                    <span>Power</span>
+                    <div class="power-bar">
+                        <div id="powerFill"></div>
+                    </div>
+                </div>
+
+                <div class="aim-help">
+                    Drag &amp; release to shoot
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <aside class="side-panel">
+
+            <div class="info-card">
+
+                <h3>How to Play</h3>
+
+                <div class="rule">
+                    <span>🎯</span>
+                    <p>
+                        Drag backwards from your shooter marble
+                        to aim.
+                    </p>
+                </div>
+
+                <div class="rule">
+                    <span>💥</span>
+                    <p>
+                        Release to shoot and hit target marbles.
+                    </p>
+                </div>
+
+                <div class="rule">
+                    <span>🏆</span>
+                    <p>
+                        Each target knocked out gives you points.
+                    </p>
+                </div>
+
+                <div class="rule">
+                    <span>❤️</span>
+                    <p>
+                        You have 3 lives.
+                    </p>
+                </div>
+
+                <div class="rule">
+                    <span>🤖</span>
+                    <p>
+                        The computer gets its own turns.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card tips">
+
+                <h3>Quick Tips</h3>
+
+                <ul>
+                    <li>Use controlled shots.</li>
+                    <li>Avoid wasting your turns.</li>
+                    <li>Target groups of marbles.</li>
+                    <li>Hard mode has a stronger computer.</li>
+                </ul>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <section class="discovery">
+
+        <div class="discovery-label">
+            CULTURAL DISCOVERY
+        </div>
+
+        <h2>Kancha — A Traditional Marble Game</h2>
+
+        <p>
+            Kancha, also known as goli in different regions,
+            refers to traditional marble games played by children
+            in many parts of India. Players use small glass or
+            stone marbles and develop aiming, timing and hand-eye
+            coordination through play.
+        </p>
+
+
+        <div class="discovery-grid">
+
+            <div>
+                <span>🟤</span>
+
+                <h3>Simple Materials</h3>
+
+                <p>
+                    Traditional play commonly uses small colourful
+                    marbles that are easy to carry and share.
+                </p>
+            </div>
+
+
+            <div>
+                <span>🎯</span>
+
+                <h3>Aiming Skill</h3>
+
+                <p>
+                    Players practise accuracy, timing and controlled
+                    movement while aiming at targets.
+                </p>
+            </div>
+
+
+            <div>
+                <span>👥</span>
+
+                <h3>Shared Play</h3>
+
+                <p>
+                    Marble games have been played socially among
+                    children in many communities.
+                </p>
+            </div>
+
+        </div>
+
+
+        <p class="adaptation">
+
+            <strong>Digital adaptation:</strong>
+
+            This game is a simplified digital interpretation
+            inspired by traditional Indian marble games.
+        </p>
+
+    </section>
+
+</main>
+
+
+<div id="resultOverlay" class="result-overlay" hidden>
+
+    <div class="result-card">
+
+        <div id="resultIcon" class="result-icon">
+            🏆
+        </div>
+
+        <h2 id="resultTitle">
+            Game Over
+        </h2>
+
+        <p id="resultMessage">
+            Great shooting!
+        </p>
+
+
+        <div class="final-score">
+
+            <span>
+                Final Score
+            </span>
+
+            <strong id="finalScore">
+                0
+            </strong>
+
+        </div>
+
+
+        <button id="restartBtn" class="primary-btn">
+            🟤 Play Again
+        </button>
+
+        <a href="games.html" class="secondary-btn">
+            Back to Games
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <strong>CURIOSO</strong> — Learn India Through Play
+</footer>
+
+
+<script src="kancha.js"></script>
+
+</body>
+</html>

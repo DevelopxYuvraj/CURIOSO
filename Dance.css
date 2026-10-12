@@ -1,0 +1,799 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(226,160,72,0.08),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(35,107,85,0.08),
+            transparent 25%
+        ),
+        #faf8f3;
+
+    color: #18212b;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+        background-image:
+        linear-gradient(
+            rgba(255, 248, 232, 0.35),
+            rgba(255, 248, 232, 0.35)
+        ),
+        url("./assets/dance-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #e76f24;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #18212b;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #236b55;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 560px;
+
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 247, 232, 0.72),
+            rgba(233, 244, 237, 0.66)
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag,
+.small-title,
+.section-heading span,
+.fact-card span {
+    color: #e76f24;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.05;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: #236b55;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #59636c;
+}
+
+.hero-btn {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+
+    padding: 15px 26px;
+
+    border-radius: 999px;
+
+    background: #236b55;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 30px rgba(35,107,85,0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+
+    background: #174b3c;
+
+    box-shadow:
+        0 18px 38px rgba(35,107,85,0.30);
+}
+.hero-btn:hover {
+    background: #185440;
+}
+
+.hero-art {
+    font-size: 230px;
+    animation: dance 2.5s infinite ease-in-out;
+}
+
+@keyframes dance {
+
+    0%, 100% {
+        transform: rotate(-5deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(5deg) translateY(-20px);
+    }
+}
+
+
+/* ================= COMMON SECTION ================= */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: auto auto 45px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #68727b;
+}
+
+
+/* ================= DANCE BUTTONS ================= */
+
+.dance-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.dance-buttons button {
+    border: 2px solid #236b55;
+    background: white;
+    color: #236b55;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.dance-buttons button:hover {
+    background: #236b55;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* ================= DANCE INFO ================= */
+
+.dance-info {
+    max-width: 1000px;
+    margin: auto;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.dance-icon {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 20px;
+
+    background: #fff0dd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 60px;
+
+    flex-shrink: 0;
+}
+
+.dance-info h3 {
+    font-size: 32px;
+    color: #236b55;
+    margin-bottom: 8px;
+}
+
+.dance-info p {
+    color: #606b73;
+}
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.info-item {
+    background: #f7f3ea;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.info-item strong {
+    display: block;
+    color: #e76f24;
+    font-size: 13px;
+}
+
+.info-item span {
+    font-weight: bold;
+}
+
+
+/* ================= STORY ================= */
+
+.story-section {
+    padding: 100px 8%;
+
+    background: #236b55;
+    color: white;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.story-text h2 {
+    font-size: 48px;
+    margin: 15px 0 25px;
+}
+
+.story-text p {
+    color: #e1eee8;
+    margin-bottom: 18px;
+}
+
+.story-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.story-points div {
+    background: rgba(255,255,255,0.1);
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.story-points strong {
+    color: #ffb45c;
+}
+
+.story-card {
+    background: #fff8eb;
+    color: #18212b;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.big-dancer {
+    font-size: 130px;
+}
+
+.story-card h3 {
+    color: #236b55;
+    font-size: 25px;
+}
+
+
+/* ================= FEATURES ================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.feature-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+
+    color: #236b55;
+}
+
+.feature-card p {
+    color: #657078;
+}
+
+
+/* ================= STEPS ================= */
+
+.steps-section {
+    padding: 90px 8%;
+
+    background: #fff8eb;
+}
+
+.step-box {
+    max-width: 700px;
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.step-display {
+    min-height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+    font-weight: bold;
+
+    color: #236b55;
+}
+
+.step-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.step-buttons button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #236b55;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.step-buttons button:hover {
+    transform: translateY(-3px);
+}
+
+#stepMessage {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #e76f24;
+}
+
+
+/* ================= FACT ================= */
+
+.fact-section {
+    padding: 80px 8%;
+}
+
+.fact-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 55px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0d8,
+            #e7f2eb
+        );
+}
+
+.fact-card h2 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.fact-card button {
+    border: none;
+
+    background: #e76f24;
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* ================= QUIZ ================= */
+
+.quiz-section {
+    padding: 100px 8%;
+
+    background: #eef5f0;
+}
+
+.quiz-card {
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.quiz-number {
+    color: #e76f24;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.quiz-card h3 {
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+.options {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.options button {
+    padding: 15px;
+
+    background: #f7f3ea;
+
+    border: 2px solid transparent;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.options button:hover {
+    border-color: #236b55;
+}
+
+#quizResult {
+    text-align: center;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+.score {
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: #236b55;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #18212b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.footer-logo {
+    color: #ff9a4c;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #bbc4ca;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .hero-art {
+        font-size: 150px;
+        margin-top: 30px;
+    }
+
+    .story-section {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media(max-width: 550px) {
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .section,
+    .steps-section,
+    .quiz-section,
+    .fact-section {
+        padding: 65px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .story-text h2 {
+        font-size: 36px;
+    }
+
+    .dance-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .story-points {
+        grid-template-columns: 1fr;
+    }
+
+    .fact-card {
+        padding: 35px 20px;
+    }
+
+}
+.dance-icon {
+    width: 360px;
+    height: 430px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #eee8da;
+
+    box-shadow:
+        0 20px 55px rgba(24,33,43,0.13);
+}
+
+.dance-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.7s ease;
+}
+
+.dance-icon:hover img {
+    transform: scale(1.05);
+}
+.card,
+.festival-card,
+.craft-card,
+.dance-info,
+.heritage-info,
+.artisan-card,
+.quiz-card {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}

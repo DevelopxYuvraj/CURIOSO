@@ -1,0 +1,118 @@
+<!-- =========================================
+     CURIOSO AI CHATBOT
+========================================= -->
+
+<div class="chatbot-container" id="chatbotContainer">
+
+    <!-- CHATBOT HEADER -->
+    <div class="chatbot-header">
+
+        <div class="chatbot-title">
+            <div class="chatbot-avatar">🇮🇳</div>
+
+            <div>
+                <h3>Curioso AI</h3>
+                <span>Indian Culture Assistant</span>
+            </div>
+        </div>
+
+        <button
+            class="chatbot-close"
+            id="chatbotClose"
+            aria-label="Close chatbot">
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- CHAT MESSAGES -->
+    <div class="chatbot-messages" id="chatbotMessages">
+
+        <!-- BOT WELCOME MESSAGE -->
+        <div class="chat-message bot-message">
+
+            <div class="message-avatar">
+                🇮🇳
+            </div>
+
+            <div class="message-content">
+                <p>
+                    Namaste! 🙏
+                </p>
+
+                <p>
+                    I'm Curioso AI. I can help you learn about
+                    Indian history, festivals, dance, culture,
+                    art & crafts and heritage.
+                </p>
+
+                <p>
+                    What would you like to explore?
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK QUESTIONS -->
+    <div class="chatbot-suggestions">
+
+        <button onclick="askSuggestion('Tell me about Diwali')">
+            🪔 Diwali
+        </button>
+
+        <button onclick="askSuggestion('Tell me about Bharatanatyam')">
+            💃 Dance
+        </button>
+
+        <button onclick="askSuggestion('Tell me about Madhubani art')">
+            🎨 Art
+        </button>
+
+        <button onclick="askSuggestion('Tell me about the Taj Mahal')">
+            🏛️ Heritage
+        </button>
+
+    </div>
+
+
+    <!-- CHAT INPUT -->
+    <div class="chatbot-input-area">
+
+        <input
+            type="text"
+            id="chatbotInput"
+            placeholder="Ask about Indian culture..."
+            autocomplete="off"
+        >
+
+        <button
+            id="chatbotSend"
+            aria-label="Send message">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- FLOATING CHAT BUTTON -->
+
+<button
+    class="chatbot-toggle"
+    id="chatbotToggle"
+    aria-label="Open Curioso AI">
+
+    <span class="chatbot-toggle-icon">
+        💬
+    </span>
+
+    <span class="chatbot-toggle-text">
+        Ask Curioso AI
+    </span>
+
+</button>

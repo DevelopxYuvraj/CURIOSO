@@ -1,0 +1,2539 @@
+
+/* =========================================================
+   CURIOSO — PREMIUM INDIAN CULTURE WEBSITE
+   Modern • Elegant • Responsive • Professional
+========================================================= */
+
+/* ---------- GOOGLE FONT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    border: none;
+}
+
+::selection {
+    background: #236b55;
+    color: white;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(24, 33, 43, 0.07);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+
+/* LOGO */
+
+.logo {
+    position: relative;
+
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    color: #18212b;
+}
+
+.logo::after {
+    content: "";
+    display: block;
+
+    width: 32px;
+    height: 3px;
+
+    margin-top: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #e76f24,
+        #e8b44d,
+        #236b55
+    );
+
+    border-radius: 20px;
+}
+
+
+/* NAV BUTTON */
+
+nav button {
+    position: relative;
+
+    padding: 12px 22px;
+
+    background: #236b55;
+    color: white;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 22px rgba(35, 107, 85, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+nav button:hover {
+    transform: translateY(-2px);
+    background: #174b3b;
+
+    box-shadow: 0 12px 28px rgba(35, 107, 85, 0.3);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 620px;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+
+    align-items: center;
+    gap: 70px;
+
+    padding: 90px 7%;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(35, 107, 85, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(231, 111, 36, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 253, 247, 0.76),
+            rgba(240, 247, 241, 0.68)
+        );
+}
+
+
+/* Decorative background */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -150px;
+    top: -150px;
+
+    border: 1px solid rgba(35, 107, 85, 0.12);
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    left: -150px;
+    bottom: -150px;
+
+    border: 1px solid rgba(231, 111, 36, 0.15);
+    border-radius: 50%;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* TAG */
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 9px 16px;
+
+    margin-bottom: 22px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(35, 107, 85, 0.12);
+
+    border-radius: 50px;
+
+    color: #236b55;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* HERO TITLE */
+
+.hero h1 {
+    max-width: 750px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(44px, 5vw, 72px);
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+
+    color: #17232b;
+}
+
+.hero h1::first-line {
+    color: #17232b;
+}
+
+
+/* HERO PARAGRAPH */
+
+.hero p {
+    max-width: 650px;
+
+    margin-bottom: 32px;
+
+    color: #5e6971;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* HERO BUTTON */
+
+.hero button {
+    position: relative;
+
+    padding: 15px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #236b55,
+        #174b3b
+    );
+
+    color: white;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 28px rgba(35, 107, 85, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 18px 35px rgba(35, 107, 85, 0.35);
+}
+
+
+/* =========================================================
+   INDIA CARD
+========================================================= */
+
+.india-card {
+    position: relative;
+    z-index: 2;
+
+    min-height: 370px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(255,255,255,0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #236b55,
+            #123f32
+        );
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 30px 70px rgba(22, 71, 57, 0.25),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+
+    overflow: hidden;
+
+    transition: transform 0.4s ease;
+}
+
+.india-card:hover {
+    transform: translateY(-8px) rotate(0.5deg);
+}
+
+
+/* Card decorative circle */
+
+.india-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    top: -100px;
+    right: -100px;
+}
+
+.india-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    bottom: -80px;
+    left: -70px;
+}
+
+
+.india-card h3 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    color: #f5d58a;
+}
+
+
+.india-icon {
+    position: relative;
+    z-index: 2;
+
+    margin: 25px 0;
+
+    font-size: 110px;
+
+    filter:
+        drop-shadow(0 15px 20px rgba(0,0,0,0.2));
+
+    animation: floatIndia 4s ease-in-out infinite;
+}
+
+@keyframes floatIndia {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.india-card p {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section {
+    padding: 95px 7%;
+}
+
+section h2 {
+    position: relative;
+
+    text-align: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    line-height: 1.1;
+
+    margin-bottom: 14px;
+
+    color: #18212b;
+}
+
+
+/* Small line below headings */
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin: 16px auto 0;
+
+    background: linear-gradient(
+        90deg,
+        #e76f24,
+        #e8b44d,
+        #236b55
+    );
+
+    border-radius: 20px;
+}
+
+
+.subtitle {
+    max-width: 650px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+
+    color: #737d84;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CULTURE CARDS
+========================================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+
+/* IMPORTANT:
+   HTML has .btn wrapping .card.
+*/
+
+.cards .btn {
+    display: block;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    border-radius: 24px;
+}
+
+
+/* CARD */
+
+.card {
+    position: relative;
+
+    min-height: 245px;
+
+    padding: 30px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.95),
+            rgba(250,248,243,0.92)
+        );
+
+    border: 1px solid rgba(24,33,43,0.07);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 10px 35px rgba(24,33,43,0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Top color line */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e76f24,
+            #e8b44d,
+            #236b55
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.35s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(35,107,85,0.16);
+
+    box-shadow:
+        0 25px 55px rgba(24,33,43,0.12);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* CARD ICON */
+
+.icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff6e3,
+            #f3ead7
+        );
+
+    border: 1px solid rgba(231,111,36,0.12);
+
+    border-radius: 18px;
+
+    font-size: 34px;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+    transform: scale(1.08) rotate(-4deg);
+}
+
+
+.card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    color: #18212b;
+}
+
+
+.card p {
+    color: #717b82;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   QUIZ SECTION
+========================================================= */
+
+.quiz-section {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf5f0,
+            #f8f4e9
+        );
+
+    overflow: hidden;
+}
+
+
+.quiz-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -180px;
+    left: -100px;
+
+    border: 1px solid rgba(35,107,85,0.08);
+
+    border-radius: 50%;
+}
+
+
+.quiz {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 70px rgba(24,33,43,0.10);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* QUESTION TOP */
+
+.quiz-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #edf0ef;
+}
+
+#questionNumber {
+    display: inline-flex;
+
+    padding: 7px 13px;
+
+    background: #edf5f0;
+
+    color: #236b55;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* QUESTION */
+
+.quiz h3 {
+    margin-bottom: 28px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 26px;
+
+    line-height: 1.4;
+
+    color: #18212b;
+}
+
+
+/* OPTIONS */
+
+.options {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+.options button {
+    position: relative;
+
+    min-height: 65px;
+
+    padding: 17px 20px;
+
+    background: #fbfcfb;
+
+    border: 2px solid #e7ece9;
+
+    border-radius: 16px;
+
+    color: #35414a;
+
+    text-align: left;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+.options button::after {
+    content: "→";
+
+    position: absolute;
+
+    right: 18px;
+
+    opacity: 0;
+
+    color: #236b55;
+
+    transition: all 0.25s ease;
+}
+
+
+.options button:hover {
+    transform: translateX(4px);
+
+    background: #f0f7f2;
+
+    border-color: #236b55;
+
+    color: #174b3b;
+
+    box-shadow:
+        0 8px 22px rgba(35,107,85,0.10);
+}
+
+.options button:hover::after {
+    opacity: 1;
+    right: 14px;
+}
+
+
+/* RESULT */
+
+#result {
+    margin-top: 22px;
+
+    padding: 16px 18px;
+
+    border-radius: 15px;
+
+    background: #edf7f0;
+
+    border: 1px solid rgba(35,107,85,0.12);
+
+    color: #236b55;
+
+    font-weight: 700;
+
+    animation: resultAppear 0.3s ease;
+}
+
+@keyframes resultAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* NEXT BUTTON */
+
+#nextButton {
+    padding: 13px 24px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #236b55,
+            #174b3b
+        ) !important;
+
+    border-radius: 50px !important;
+
+    box-shadow:
+        0 10px 25px rgba(35,107,85,0.20);
+
+    transition: all 0.25s ease;
+}
+
+#nextButton:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(35,107,85,0.28);
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.stats div {
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fbfcfb,
+            #f5f8f6
+        );
+
+    border: 1px solid #edf0ef;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: transform 0.25s ease;
+}
+
+
+.stats div:hover {
+    transform: translateY(-4px);
+}
+
+
+.stats strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    color: #236b55;
+}
+
+
+.stats span {
+    display: block;
+
+    color: #7a8389;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PROGRESS / BADGE
+========================================================= */
+
+.progress {
+    text-align: center;
+
+    background: #faf8f3;
+}
+
+
+.badge {
+    position: relative;
+
+    width: 125px;
+    height: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 35px auto 20px;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff8e7,
+            #f4e5bd
+        );
+
+    border: 1px solid rgba(231,111,36,0.16);
+
+    border-radius: 50%;
+
+    font-size: 58px;
+
+    box-shadow:
+        0 20px 45px rgba(231,111,36,0.12);
+
+    animation: badgeFloat 3s ease-in-out infinite;
+}
+
+
+.badge::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -9px;
+
+    border: 1px dashed rgba(231,111,36,0.25);
+
+    border-radius: 50%;
+}
+
+
+@keyframes badgeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+.progress h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    color: #236b55;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    position: relative;
+
+    padding: 45px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #14251f,
+            #18212b
+        );
+
+    color: rgba(255,255,255,0.75);
+
+    text-align: center;
+
+    font-size: 13px;
+
+    letter-spacing: 0.3px;
+}
+
+
+footer::before {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    margin: 0 auto 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e76f24,
+            #e8b44d,
+            #236b55
+        );
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1eee7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #236b55;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #174b3b;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .india-card {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav button {
+        padding: 10px 16px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 65px 5%;
+
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .india-card {
+        min-height: 310px;
+
+        padding: 30px;
+    }
+
+    .india-icon {
+        font-size: 85px;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    section h2 {
+        font-size: 34px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .card {
+        min-height: auto;
+
+        padding: 25px;
+    }
+
+    .quiz {
+        padding: 25px 18px;
+
+        border-radius: 22px;
+    }
+
+    .quiz h3 {
+        font-size: 21px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stats div {
+        padding: 16px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .tag {
+        font-size: 11px;
+    }
+
+    .hero button {
+        width: 100%;
+    }
+
+    .india-card {
+        border-radius: 25px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
+/* =========================================
+   CULTURE CARDS
+========================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.culture-card {
+    display: block;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e8e5dd;
+    border-radius: 22px;
+    text-decoration: none;
+    color: #17221f;
+    box-shadow: 0 8px 25px rgba(23, 34, 31, 0.07);
+    transition: all 0.35s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(23, 34, 31, 0.14);
+}
+
+.card-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.culture-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.35),
+        transparent 55%
+    );
+}
+
+.card-image span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(255,255,255,0.92);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card-label {
+    margin: 0 0 8px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    color: #e87824;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+}
+
+.card-content p:not(.card-label) {
+    margin: 0;
+    color: #74807b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.card-link {
+    margin-top: 18px;
+    color: #176b52;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.culture-card:hover .card-link {
+    transform: translateX(5px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 230px;
+    }
+}/* =====================================================
+   CURIOSO GAMES — PREMIUM FEATURE BUTTON
+===================================================== */
+
+.curioso-games-btn {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    min-width: 245px;
+    padding: 13px 15px;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        #123f32 0%,
+        #174b3b 45%,
+        #236b55 100%
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 15px;
+
+    box-shadow:
+        0 12px 28px rgba(23, 75, 59, 0.22),
+        0 4px 10px rgba(23, 75, 59, 0.10);
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Shining effect */
+
+.curioso-games-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -130%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.18),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.65s ease;
+}
+
+
+/* Bottom saffron accent */
+
+.curioso-games-btn::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 48px;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #e76f24,
+        #e8b44d
+    );
+
+    border-radius: 0 5px 0 0;
+}
+
+
+/* Hover */
+
+.curioso-games-btn:hover {
+    transform: translateY(-4px);
+
+    background: linear-gradient(
+        135deg,
+        #10382d 0%,
+        #1c5a46 50%,
+        #2b7b60 100%
+    );
+
+    box-shadow:
+        0 18px 40px rgba(23, 75, 59, 0.30),
+        0 6px 14px rgba(23, 75, 59, 0.15);
+}
+
+
+.curioso-games-btn:hover::before {
+    left: 140%;
+}
+
+
+/* Click */
+
+.curioso-games-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.games-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 21px;
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.16);
+
+    border-radius: 11px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.15);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.curioso-games-btn:hover .games-icon {
+    transform: rotate(-6deg) scale(1.05);
+
+    background: rgba(255,255,255,0.18);
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.games-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    line-height: 1.1;
+}
+
+
+.games-label {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    color: #e8b44d;
+}
+
+
+.games-title {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.games-arrow {
+    width: 32px;
+    height: 32px;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.11);
+
+    font-size: 18px;
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.curioso-games-btn:hover .games-arrow {
+    transform: translateX(5px);
+
+    background: rgba(255,255,255,0.20);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .curioso-games-btn {
+        min-width: 215px;
+
+        padding: 11px 13px;
+
+        border-radius: 13px;
+    }
+
+    .games-icon {
+        width: 39px;
+        height: 39px;
+
+        font-size: 19px;
+    }
+
+    .games-title {
+        font-size: 13px;
+    }
+
+    .games-label {
+        font-size: 7px;
+    }
+
+    .games-arrow {
+        width: 29px;
+        height: 29px;
+
+        font-size: 16px;
+    }
+}
+
+/* =====================================================
+   CULTURE MAP ENTRY
+===================================================== */
+.culture-map-entry{margin:0 auto 26px;max-width:1050px;padding:22px 24px;border-radius:22px;background:linear-gradient(135deg,#17352b,#236b55);display:flex;align-items:center;justify-content:space-between;gap:20px;color:#fff;box-shadow:0 14px 35px rgba(23,53,43,.16)}
+.culture-map-copy{display:flex;flex-direction:column;gap:5px}.culture-map-kicker{font-size:9px;letter-spacing:1.5px;font-weight:900;color:#f0c66c}.culture-map-copy h3{margin:0;font-size:22px}.culture-map-copy p{margin:0;color:#d1e0d9;font-size:13px}.culture-map-link{flex-shrink:0;text-decoration:none;background:#f0c66c;color:#17352b;padding:12px 17px;border-radius:12px;font-size:12px;font-weight:900;transition:.2s}.culture-map-link:hover{transform:translateX(3px);background:#fff}
+@media(max-width:600px){.culture-map-entry{display:block}.culture-map-link{display:inline-block;margin-top:14px}}
+/* =========================================================
+   CURIOSO — PREMIUM CULTURAL UI
+   Dance + Heritage Pages
+========================================================= */
+
+:root {
+    --curioso-bg: #f7f1e5;
+    --curioso-paper: #fffdf8;
+    --curioso-paper-soft: #f3ead8;
+
+    --curioso-green: #173f35;
+    --curioso-green-light: #285f50;
+
+    --curioso-gold: #c4933f;
+    --curioso-gold-light: #e2bf78;
+
+    --curioso-brown: #6d4930;
+    --curioso-text: #25221e;
+    --curioso-muted: #756f67;
+
+    --curioso-border: rgba(112, 82, 43, 0.18);
+
+    --shadow-soft:
+        0 10px 30px rgba(58, 42, 22, 0.08);
+
+    --shadow-hover:
+        0 22px 55px rgba(58, 42, 22, 0.16);
+
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 11px;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(250, 248, 243, 0.35),
+            rgba(250, 248, 243, 0.35)
+        ),
+        url("./assets/Dreamy Indian Heritage Skyline Backdrop.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #18212b;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+
+
+/* =========================================================
+   PAGE CONTAINER
+========================================================= */
+
+main,
+section,
+.page-container {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: min(1180px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--curioso-green);
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    line-height: 1.3;
+}
+
+
+/* Decorative heading line */
+
+h2::after {
+    content: "";
+    display: block;
+
+    width: 58px;
+    height: 3px;
+
+    margin-top: 12px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--curioso-gold),
+            var(--curioso-gold-light)
+        );
+}
+
+
+/* =========================================================
+   DANCE / HERITAGE BUTTON AREA
+========================================================= */
+
+.dance-buttons,
+.heritage-buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(155px, 1fr));
+
+    gap: 12px;
+
+    margin: 28px 0 38px;
+
+    padding: 20px;
+
+    border: 1px solid var(--curioso-border);
+
+    border-radius: var(--radius-lg);
+
+    background:
+        rgba(255, 253, 248, 0.72);
+
+    box-shadow: var(--shadow-soft);
+
+    backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.dance-buttons button,
+.heritage-buttons button {
+
+    position: relative;
+
+    min-height: 52px;
+
+    padding: 12px 16px;
+
+    border: 1px solid rgba(196, 147, 63, 0.28);
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f5ead6
+        );
+
+    color: var(--curioso-green);
+
+    font-size: 0.93rem;
+    font-weight: 700;
+
+    letter-spacing: 0.01em;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(50, 35, 20, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.dance-buttons button::before,
+.heritage-buttons button::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    border-radius: 13px 0 0 13px;
+
+    background: var(--curioso-gold);
+
+    transform: scaleY(0);
+
+    transition: transform 0.25s ease;
+}
+
+
+.dance-buttons button:hover,
+.heritage-buttons button:hover {
+
+    transform: translateY(-3px);
+
+    color: #fff;
+
+    border-color: var(--curioso-green);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--curioso-green),
+            var(--curioso-green-light)
+        );
+
+    box-shadow: var(--shadow-hover);
+}
+
+
+.dance-buttons button:hover::before,
+.heritage-buttons button:hover::before {
+
+    transform: scaleY(1);
+}
+
+
+.dance-buttons button:active,
+.heritage-buttons button:active {
+
+    transform: translateY(-1px) scale(0.98);
+}
+
+
+/* Keyboard accessibility */
+
+.dance-buttons button:focus-visible,
+.heritage-buttons button:focus-visible {
+
+    outline: 3px solid rgba(196, 147, 63, 0.45);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   INFORMATION CARD
+========================================================= */
+
+#danceInfo,
+#heritageInfo {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.9fr)
+        minmax(320px, 1.4fr);
+
+    gap: 34px;
+
+    align-items: center;
+
+    margin: 35px 0 55px;
+
+    padding: 32px;
+
+    border: 1px solid var(--curioso-border);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 253, 248, 0.96),
+            rgba(247, 239, 224, 0.92)
+        );
+
+    box-shadow:
+        0 18px 50px rgba(59, 43, 24, 0.11);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* Decorative gold corner */
+
+#danceInfo::before,
+#heritageInfo::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 110px;
+    height: 110px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(196, 147, 63, 0.16),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.dance-icon,
+.monument-icon {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 310px;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ead8b8,
+            #f8f1e3
+        );
+
+    box-shadow:
+        0 16px 35px rgba(48, 34, 18, 0.15);
+}
+
+
+/* Image */
+
+.dance-icon img,
+.monument-icon img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 310px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.55s ease,
+        filter 0.55s ease;
+}
+
+
+/* Image zoom */
+
+#danceInfo:hover .dance-icon img,
+#heritageInfo:hover .monument-icon img {
+
+    transform: scale(1.045);
+
+    filter: saturate(1.05) contrast(1.03);
+}
+
+
+/* Image overlay */
+
+.dance-icon::after,
+.monument-icon::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(15, 30, 25, 0.28)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+#danceInfo > div:last-child,
+#heritageInfo > div:last-child {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+#danceInfo h3,
+#heritageInfo h3 {
+
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+    color: var(--curioso-green);
+
+    letter-spacing: -0.025em;
+}
+
+
+/* Description */
+
+#danceInfo p,
+#heritageInfo p {
+
+    margin: 0 0 25px;
+
+    color: #5d574f;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   INFORMATION GRID
+========================================================= */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+
+/* Information item */
+
+.info-item {
+
+    min-height: 90px;
+
+    padding: 17px 18px;
+
+    border: 1px solid rgba(112, 82, 43, 0.13);
+
+    border-radius: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 5px 18px rgba(48, 34, 18, 0.045);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+
+.info-item:hover {
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(196, 147, 63, 0.35);
+
+    box-shadow:
+        0 10px 25px rgba(48, 34, 18, 0.09);
+}
+
+
+.info-item strong {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--curioso-gold);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+.info-item span {
+
+    display: block;
+
+    color: var(--curioso-green);
+
+    font-size: 0.92rem;
+
+    font-weight: 650;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   HERITAGE-SPECIFIC DETAILS
+========================================================= */
+
+#heritageInfo .info-item strong {
+    color: #a9792e;
+}
+
+
+/* =========================================================
+   SECTION CARDS
+========================================================= */
+
+.card,
+.content-card,
+.cultural-card {
+
+    border:
+        1px solid var(--curioso-border);
+
+    border-radius: var(--radius-lg);
+
+    background:
+        rgba(255, 253, 248, 0.82);
+
+    box-shadow: var(--shadow-soft);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.card:hover,
+.content-card:hover,
+.cultural-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+
+/* =========================================================
+   QUIZ / GAME AREA
+========================================================= */
+
+.options {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-top: 22px;
+}
+
+
+.options button {
+
+    min-height: 54px;
+
+    padding: 12px 18px;
+
+    border: 1px solid var(--curioso-border);
+
+    border-radius: 13px;
+
+    background: #fffdf8;
+
+    color: var(--curioso-green);
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.options button:hover {
+
+    transform: translateY(-2px);
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--curioso-green),
+            var(--curioso-green-light)
+        );
+
+    box-shadow:
+        0 10px 25px rgba(23, 63, 53, 0.18);
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection {
+
+    color: #fff;
+
+    background:
+        var(--curioso-green);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee5d5;
+}
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--curioso-gold),
+            var(--curioso-brown)
+        );
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--curioso-green);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    #danceInfo,
+    #heritageInfo {
+
+        grid-template-columns: 1fr;
+
+        padding: 22px;
+
+        gap: 24px;
+    }
+
+    .dance-icon,
+    .monument-icon {
+
+        min-height: 260px;
+    }
+
+    .dance-icon img,
+    .monument-icon img {
+
+        min-height: 260px;
+    }
+
+    .dance-buttons,
+    .heritage-buttons {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        padding: 15px;
+
+        gap: 9px;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .container {
+
+        width: min(
+            100% - 24px,
+            1180px
+        );
+    }
+
+    .dance-buttons,
+    .heritage-buttons {
+
+        grid-template-columns: 1fr;
+
+        margin-top: 20px;
+
+        padding: 12px;
+    }
+
+    .dance-buttons button,
+    .heritage-buttons button {
+
+        min-height: 48px;
+
+        font-size: 0.9rem;
+    }
+
+    #danceInfo,
+    #heritageInfo {
+
+        margin-top: 25px;
+
+        padding: 16px;
+
+        border-radius: 20px;
+    }
+
+    .dance-icon,
+    .monument-icon {
+
+        min-height: 220px;
+
+        border-radius: 17px;
+    }
+
+    .dance-icon img,
+    .monument-icon img {
+
+        min-height: 220px;
+    }
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .options {
+
+        grid-template-columns: 1fr;
+
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+}

@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(226,160,72,0.08),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(35,107,85,0.08),
+            transparent 25%
+        ),
+        #faf8f3;
+
+    color: #18212b;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+     background-image:
+        linear-gradient(
+            rgba(255, 249, 235, 0.35),
+            rgba(255, 249, 235, 0.35)
+        ),
+        url("./assets/artcraft-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,.07);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #e76f24;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #18212b;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #236b55;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg,#fff2dc,#e1f0e7);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content span,
+.section-title span,
+.small-title,
+.artisan-text > span,
+.fact-card span,
+.quiz-card > span {
+    color: #e76f24;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(45px,6vw,75px);
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #59636e;
+}
+
+.hero-btn {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+
+    padding: 15px 26px;
+
+    border-radius: 999px;
+
+    background: #236b55;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 30px rgba(35,107,85,0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+
+    background: #174b3c;
+
+    box-shadow:
+        0 18px 38px rgba(35,107,85,0.30);
+}
+
+.hero-symbol {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 130px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.12);
+}
+
+
+/* COMMON */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.section-title p {
+    color: #667085;
+}
+
+
+/* CRAFT CARDS */
+
+.craft-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.craft-card {
+    background: white;
+    border: 2px solid transparent;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.craft-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.10);
+}
+
+.craft-card.active {
+    border-color: #e76f24;
+}
+
+.craft-icon {
+    width: 100%;
+    height: 190px;
+    flex: 0 0 190px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+
+    background: #eee8da;
+}
+
+.craft-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.craft-card:hover .craft-icon img {
+    transform: scale(1.08);
+}
+
+.craft-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.craft-card p {
+    color: #667085;
+}
+
+
+/* STORY */
+
+.story-section {
+    padding: 100px 8%;
+    background: white;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.story-art {
+    height: 460px;
+
+    overflow: hidden;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff0d5,
+            #e1f0e8
+        );
+
+    box-shadow:
+        0 25px 70px rgba(24,33,43,0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-art > div {
+    width: 100%;
+    height: 100%;
+}
+
+.story-art img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.7s ease;
+}
+
+.story-art:hover img {
+    transform: scale(1.04);
+}
+
+.story-content h2 {
+    font-size: 52px;
+    margin: 15px 0;
+}
+
+.story-content > p {
+    line-height: 1.8;
+    color: #59636e;
+    font-size: 17px;
+}
+
+.craft-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.craft-info div {
+    background: #f7f3ea;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.craft-info span {
+    font-size: 25px;
+}
+
+.craft-info strong {
+    display: block;
+    margin: 8px 0;
+}
+
+.craft-info p {
+    color: #667085;
+}
+
+
+/* ARTISAN */
+
+.artisan-section {
+    padding: 90px 8%;
+}
+
+.artisan-card {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    border-radius: 30px;
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.07);
+}
+
+.artisan-avatar {
+    min-width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #f8ead7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+}
+
+.artisan-text h2 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.artisan-text p {
+    line-height: 1.7;
+    color: #667085;
+    margin-bottom: 15px;
+}
+
+.artisan-points {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.artisan-points div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* STEPS */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    color: #e76f24;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.step-icon {
+    font-size: 45px;
+    margin: 15px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #667085;
+    line-height: 1.6;
+}
+
+
+/* MATERIALS */
+
+.materials-section {
+    background: #236b55;
+    color: white;
+    padding: 90px 8%;
+}
+
+.materials-section .section-title span {
+    color: #ffd166;
+}
+
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.material {
+    background: rgba(255,255,255,.10);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.material:first-letter {
+    font-size: 35px;
+}
+
+.material h3 {
+    margin: 15px 0 10px;
+}
+
+.material p {
+    color: #d9eee5;
+    line-height: 1.6;
+}
+
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 230px;
+    background: linear-gradient(145deg,#fff0d5,#e5eee8);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    transition: .3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item p {
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* TRY ART */
+
+.try-section {
+    padding: 90px 8%;
+    background: #eee8da;
+}
+
+.drawing-box {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.drawing-tools {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.drawing-tools button {
+    border: none;
+    background: #236b55;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+canvas {
+    max-width: 100%;
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+    background: #fffdf7;
+}
+
+.drawing-box p {
+    color: #667085;
+    margin-top: 15px;
+}
+
+
+/* FACT */
+
+.fact-section {
+    padding: 80px 8%;
+}
+
+.fact-card {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 55px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.fact-card h2 {
+    margin: 20px 0 30px;
+    line-height: 1.5;
+}
+
+.fact-card button {
+    border: none;
+    background: #e76f24;
+    color: white;
+    padding: 13px 23px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+/* QUIZ */
+
+.quiz-section {
+    padding: 90px 8%;
+    background: #eee8da;
+}
+
+.quiz-card {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.quiz-card h2 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.quiz-card > p {
+    font-size: 18px;
+    margin: 25px;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.answers button {
+    padding: 15px;
+    border: 2px solid #ddd;
+    background: #f7f3ea;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.answers button:hover {
+    border-color: #236b55;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #18212b;
+    color: white;
+    text-align: center;
+    padding: 45px;
+}
+
+.footer-logo {
+    color: #e76f24;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #b9c2cc;
+    margin: 8px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .craft-grid,
+    .steps,
+    .materials-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .story-section {
+        grid-template-columns: 1fr;
+    }
+
+    .artisan-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .materials-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media(max-width:550px) {
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .craft-grid,
+    .steps,
+    .gallery,
+    .material-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-section {
+        padding: 60px 6%;
+    }
+
+    .story-art {
+        height: 280px;
+        font-size: 100px;
+    }
+
+    .craft-info {
+        grid-template-columns: 1fr;
+    }
+
+    .artisan-card {
+        padding: 30px 20px;
+    }
+
+    .artisan-points {
+        justify-content: center;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .fact-card,
+    .quiz-card {
+        padding: 30px 20px;
+    }
+}
+.card,
+.festival-card,
+.craft-card,
+.dance-info,
+.heritage-info,
+.artisan-card,
+.quiz-card {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}

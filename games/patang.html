@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patang 🪁 | CURIOSO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="patang.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">CURIOSO</div>
+
+    <div class="game-title">
+        🪁 <span>Patang</span>
+    </div>
+
+    <a href="games.html" class="back-btn">← Back to Games</a>
+</header>
+
+
+<main class="page">
+
+    <section class="intro">
+        <div>
+            <span class="eyebrow">SKILL • REFLEX</span>
+            <h1>Patang 🪁</h1>
+            <p>
+                Control your kite, read the changing wind and challenge
+                the computer in a fast-paced sky battle.
+            </p>
+        </div>
+
+        <div class="difficulty-box">
+            <label for="difficulty">Difficulty</label>
+
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    </section>
+
+
+    <section class="game-layout">
+
+        <div class="game-card">
+
+            <div class="hud">
+
+                <div class="hud-item">
+                    <span>Score</span>
+                    <strong id="score">0</strong>
+                </div>
+
+                <div class="hud-item">
+                    <span>Lives</span>
+                    <strong id="lives">❤️❤️❤️</strong>
+                </div>
+
+                <div class="hud-item">
+                    <span>Wind</span>
+                    <strong id="wind">→</strong>
+                </div>
+
+                <div class="hud-item">
+                    <span>Time</span>
+                    <strong id="time">60</strong>
+                </div>
+
+            </div>
+
+
+            <div class="canvas-wrap">
+                <canvas id="gameCanvas"></canvas>
+
+                <div id="startScreen" class="start-screen">
+
+                    <div class="start-icon">🪁</div>
+
+                    <h2>Ready to Fly?</h2>
+
+                    <p>
+                        Move your kite, watch the wind and cut the
+                        opponent's kite when the moment is right.
+                    </p>
+
+                    <button id="startBtn" class="primary-btn">
+                        Start Game
+                    </button>
+
+                    <small>
+                        Keyboard: Arrow Keys / WASD
+                    </small>
+
+                </div>
+            </div>
+
+
+            <div class="controls">
+
+                <button id="upBtn">↑</button>
+
+                <div class="horizontal-controls">
+                    <button id="leftBtn">←</button>
+                    <button id="cutBtn">✂️ CUT</button>
+                    <button id="rightBtn">→</button>
+                </div>
+
+                <button id="downBtn">↓</button>
+
+            </div>
+
+        </div>
+
+
+        <aside class="side-panel">
+
+            <div class="info-card">
+
+                <h3>How to Play</h3>
+
+                <div class="rule">
+                    <span>🪁</span>
+                    <p>Move your kite around the sky.</p>
+                </div>
+
+                <div class="rule">
+                    <span>💨</span>
+                    <p>Watch the wind direction and adjust your movement.</p>
+                </div>
+
+                <div class="rule">
+                    <span>✂️</span>
+                    <p>Get close to the opponent and use CUT.</p>
+                </div>
+
+                <div class="rule">
+                    <span>❤️</span>
+                    <p>You have 3 lives.</p>
+                </div>
+
+                <div class="rule">
+                    <span>🏆</span>
+                    <p>Stay airborne and score points to win.</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card tips">
+
+                <h3>Quick Tips</h3>
+
+                <ul>
+                    <li>Don't stay near the edges.</li>
+                    <li>Use short movements.</li>
+                    <li>React when the opponent gets close.</li>
+                    <li>Changing wind affects your kite.</li>
+                </ul>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <section class="discovery">
+
+        <div class="discovery-label">
+            CULTURAL DISCOVERY
+        </div>
+
+        <h2>India &amp; the Art of Kite Flying</h2>
+
+        <p>
+            Kite flying is a popular recreational tradition in many parts
+            of India. It is especially associated with celebrations and
+            community gatherings, where colourful kites fill the sky.
+        </p>
+
+        <div class="discovery-grid">
+
+            <div>
+                <span>🪁</span>
+                <h3>Colourful Skies</h3>
+                <p>
+                    Kite flying brings together creativity, movement
+                    and friendly competition.
+                </p>
+            </div>
+
+            <div>
+                <span>🌬️</span>
+                <h3>Reading the Wind</h3>
+                <p>
+                    Traditional kite flying requires attention to wind,
+                    balance and timing.
+                </p>
+            </div>
+
+            <div>
+                <span>🎉</span>
+                <h3>Community</h3>
+                <p>
+                    Kite festivals and local celebrations often turn
+                    kite flying into a shared cultural experience.
+                </p>
+            </div>
+
+        </div>
+
+        <p class="adaptation">
+            <strong>Digital adaptation:</strong>
+            This game is a simplified arcade experience inspired by
+            kite-flying traditions in India.
+        </p>
+
+    </section>
+
+</main>
+
+
+<div id="resultOverlay" class="result-overlay" hidden>
+
+    <div class="result-card">
+
+        <div id="resultIcon" class="result-icon">🏆</div>
+
+        <h2 id="resultTitle">Game Over</h2>
+
+        <p id="resultMessage">
+            Great flying!
+        </p>
+
+        <div class="final-score">
+            <span>Final Score</span>
+            <strong id="finalScore">0</strong>
+        </div>
+
+        <button id="restartBtn" class="primary-btn">
+            🪁 Play Again
+        </button>
+
+        <a href="games.html" class="secondary-btn">
+            Back to Games
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <strong>CURIOSO</strong> — Learn India Through Play
+</footer>
+
+
+<script src="patang.js"></script>
+
+</body>
+</html>

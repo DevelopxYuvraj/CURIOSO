@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CURIOSO | Indian Art & Crafts</title>
+
+    <link rel="stylesheet" href="Art&Crafts.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        CURIOSO 🇮🇳
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#crafts">Art & Crafts</a>
+        <a href="#artisan">Artisan</a>
+        <a href="#making">How It's Made</a>
+        <a href="#quiz">Quiz</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span>🎨 INDIA'S CREATIVE HERITAGE</span>
+
+        <h1>
+            Art That Tells<br>
+            India's Story
+        </h1>
+
+        <p>
+            Explore the traditional arts and crafts created by
+            generations of Indian artisans.
+        </p>
+
+        <a href="#crafts" class="hero-btn">
+            Explore Crafts ↓
+        </a>
+
+    </div>
+
+    <div class="hero-symbol">
+        🎨
+    </div>
+
+</section>
+
+
+<!-- CRAFT SELECTOR -->
+
+<section class="section" id="crafts">
+
+    <div class="section-title">
+
+        <span>DISCOVER</span>
+
+        <h2>Indian Art & Crafts</h2>
+
+        <p>
+            Choose an art form and discover its cultural story.
+        </p>
+
+    </div>
+
+
+    <div class="craft-grid">
+
+        <button class="craft-card active" onclick="showCraft('madhubani', this)">
+            <div class="craft-icon"><img src="images/crafts/madhubani.jpg" alt="Madhubani Art" loading="lazy"></div>
+            <h3>Madhubani Art</h3>
+            <p>Bihar</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('warli', this)">
+            <div class="craft-icon"><img src="images/crafts/warli.jpg" alt="Warli Art" loading="lazy"></div>
+            <h3>Warli Art</h3>
+            <p>Maharashtra</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('chikankari', this)">
+            <div class="craft-icon"><img src="images/crafts/chikankari.jpg" alt="Chikankari" loading="lazy"></div>
+            <h3>Chikankari</h3>
+            <p>Lucknow, Uttar Pradesh</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('pattachitra', this)">
+            <div class="craft-icon"><img src="images/crafts/pattachitra.jpg" alt="Pattachitra" loading="lazy"></div>
+            <h3>Pattachitra</h3>
+            <p>Odisha</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('bluepottery', this)">
+            <div class="craft-icon"><img src="images/crafts/blue-pottery.jpg" alt="Blue Pottery" loading="lazy"></div>
+            <h3>Blue Pottery</h3>
+            <p>Rajasthan</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('dokra', this)">
+            <div class="craft-icon"><img src="images/crafts/dokra.jpg" alt="Dokra" loading="lazy"></div>
+            <h3>Dokra</h3>
+            <p>Central & Eastern India</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('bellmetal', this)">
+            <div class="craft-icon"><img src="images/crafts/Bell Metal Craft.jpg" alt="Bell Metal Craft" loading="lazy"></div>
+            <h3>Bell Metal Craft</h3>
+            <p>Assam</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('chambarumal', this)">
+            <div class="craft-icon"><img src="images/crafts/Chamba Rumal.jpg" alt="Chamba Rumal" loading="lazy"></div>
+            <h3>Chamba Rumal</h3>
+            <p>Himachal Pradesh</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('kantha', this)">
+            <div class="craft-icon"><img src="images/crafts/Kantha Embroidery.jpg" alt="Kantha Embroidery" loading="lazy"></div>
+            <h3>Kantha Embroidery</h3>
+            <p>West Bengal</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('thangka', this)">
+            <div class="craft-icon"><img src="images/crafts/Thangka Painting.jpg" alt="Thangka Painting" loading="lazy"></div>
+            <h3>Thangka Painting</h3>
+            <p>Himalayan Region</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('naga', this)">
+            <div class="craft-icon"><img src="images/crafts/Naga Shawls.jpg" alt="Naga Shawls" loading="lazy"></div>
+            <h3>Naga Shawls</h3>
+            <p>Nagaland</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('aipan', this)">
+            <div class="craft-icon"><img src="images/crafts/Aipan Art.jpg" alt="Aipan Art" loading="lazy"></div>
+            <h3>Aipan Art</h3>
+            <p>Uttarakhand</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('phulkari', this)">
+            <div class="craft-icon"><img src="images/crafts/Phulkari.jpg" alt="Phulkari" loading="lazy"></div>
+            <h3>Phulkari</h3>
+            <p>Punjab</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('gond', this)">
+            <div class="craft-icon"><img src="images/crafts/Gond Painting.jpg" alt="Gond Painting" loading="lazy"></div>
+            <h3>Gond Painting</h3>
+            <p>Madhya Pradesh</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('coconut', this)">
+            <div class="craft-icon"><img src="images/crafts/Coconut Craft.jpg" alt="Coconut Craft" loading="lazy"></div>
+            <h3>Coconut Craft</h3>
+            <p>Kerala</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('sohrai', this)">
+            <div class="craft-icon"><img src="images/crafts/Sohrai Painting.jpg" alt="Sohrai Painting" loading="lazy"></div>
+            <h3>Sohrai Painting</h3>
+            <p>Jharkhand</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('mysore', this)">
+            <div class="craft-icon"><img src="images/crafts/Mysore Silk.jpg" alt="Mysore Silk" loading="lazy"></div>
+            <h3>Mysore Silk</h3>
+            <p>Karnataka</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('bidri', this)">
+            <div class="craft-icon"><img src="images/crafts/Bidri Craft.jpg" alt="Bidri Craft" loading="lazy"></div>
+            <h3>Bidri Craft</h3>
+            <p>Karnataka</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('wangkhei', this)">
+            <div class="craft-icon"><img src="images/crafts/Wangkhei Silk.jpg" alt="Wangkhei Silk" loading="lazy"></div>
+            <h3>Wangkhei Silk</h3>
+            <p>Manipur</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('coir', this)">
+            <div class="craft-icon"><img src="images/crafts/Coir Craft.jpg" alt="Coir Craft" loading="lazy"></div>
+            <h3>Coir Craft</h3>
+            <p>Kerala</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('tanjore', this)">
+            <div class="craft-icon"><img src="images/crafts/Tanjore Painting.jpg" alt="Tanjore Painting" loading="lazy"></div>
+            <h3>Tanjore Painting</h3>
+            <p>Tamil Nadu</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('bamboo', this)">
+            <div class="craft-icon"><img src="images/crafts/bamboo.jpg" alt="Bamboo Craft" loading="lazy"></div>
+            <h3>Bamboo Craft</h3>
+            <p>Northeast India</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('muga', this)">
+            <div class="craft-icon"><img src="images/crafts/Muga Silk.jpg" alt="Muga Silk" loading="lazy"></div>
+            <h3>Muga Silk</h3>
+            <p>Assam</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('kalamkari', this)">
+            <div class="craft-icon"><img src="images/crafts/Kalamkari.jpg" alt="Kalamkari" loading="lazy"></div>
+            <h3>Kalamkari</h3>
+            <p>Andhra Pradesh & Telangana</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('patola', this)">
+            <div class="craft-icon"><img src="images/crafts/Patola.jpg" alt="Patola" loading="lazy"></div>
+            <h3>Patola</h3>
+            <p>Gujarat</p>
+        </button>
+
+        <button class="craft-card" onclick="showCraft('woodcarving', this)">
+            <div class="craft-icon"><img src="images/crafts/Wood Carving.jpg" alt="Wood Carving" loading="lazy"></div>
+            <h3>Wood Carving</h3>
+            <p>India</p>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ART STORY -->
+
+<section class="story-section">
+
+<div class="story-art">
+    <div id="craftEmoji"><img src="images/crafts/madhubani.jpg" alt="Madhubani Art"></div>
+</div>
+
+
+    <div class="story-content">
+
+        <span class="small-title">
+            ✨ CRAFT STORY
+        </span>
+
+        <h2 id="craftTitle">
+            Madhubani Art
+        </h2>
+
+        <p id="craftDescription">
+
+            Madhubani painting is a traditional folk art
+            associated with Bihar. It is known for detailed
+            patterns, bright colours and themes inspired by
+            nature, mythology and everyday life.
+
+        </p>
+
+
+        <div class="craft-info">
+
+            <div>
+                <span>📍</span>
+
+                <strong>Origin</strong>
+
+                <p id="craftRegion">
+                    Bihar
+                </p>
+
+            </div>
+
+
+            <div>
+                <span>🎨</span>
+
+                <strong>Style</strong>
+
+                <p id="craftStyle">
+                    Folk Painting
+                </p>
+
+            </div>
+
+
+            <div>
+                <span>🧰</span>
+
+                <strong>Materials</strong>
+
+                <p id="craftMaterial">
+                    Natural colours & paper
+                </p>
+
+            </div>
+
+
+            <div>
+                <span>🌿</span>
+
+                <strong>Theme</strong>
+
+                <p id="craftTheme">
+                    Nature & mythology
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARTISAN -->
+
+<section class="artisan-section" id="artisan">
+
+    <div class="section-title">
+
+        <span>MEET THE CREATOR</span>
+
+        <h2>The Artisan Behind the Art</h2>
+
+        <p>
+            Indian crafts are preserved through the skills
+            passed from one generation to another.
+        </p>
+
+    </div>
+
+
+    <div class="artisan-card">
+
+        <div class="artisan-avatar">
+            👨‍🎨
+        </div>
+
+        <div class="artisan-text">
+
+            <span>THE CRAFTSMAN</span>
+
+            <h2>
+                Every Craft Has A Story
+            </h2>
+
+            <p>
+                Behind every handmade artwork is an artisan
+                who has learned techniques through practice,
+                family traditions and years of experience.
+            </p>
+
+            <p>
+                Unlike mass-produced products, traditional
+                crafts carry the identity of the community
+                where they were created.
+            </p>
+
+            <div class="artisan-points">
+
+                <div>
+                    🧑‍🎨
+                    <strong>Skill</strong>
+                </div>
+
+                <div>
+                    🏡
+                    <strong>Tradition</strong>
+                </div>
+
+                <div>
+                    ❤️
+                    <strong>Passion</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT IS MADE -->
+
+<section class="section" id="making">
+
+    <div class="section-title">
+
+        <span>FROM HAND TO HERITAGE</span>
+
+        <h2>How Traditional Art Is Made</h2>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <div class="step-icon">
+                🧰
+            </div>
+
+            <h3>Choose Materials</h3>
+
+            <p>
+                Artisans select suitable natural or
+                traditional materials.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <div class="step-icon">
+                ✏️
+            </div>
+
+            <h3>Create the Design</h3>
+
+            <p>
+                Traditional patterns and designs are
+                carefully created by hand.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <div class="step-icon">
+                🎨
+            </div>
+
+            <h3>Add Details</h3>
+
+            <p>
+                Colours, textures and decorative elements
+                are added patiently.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <div class="step-icon">
+                ✨
+            </div>
+
+            <h3>Final Artwork</h3>
+
+            <p>
+                The finished artwork becomes a piece of
+                cultural heritage.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MATERIALS -->
+
+<section class="materials-section">
+
+    <div class="section-title">
+
+        <span>TRADITIONAL TOOLS</span>
+
+        <h2>Materials Used</h2>
+
+    </div>
+
+
+    <div class="material-grid">
+
+        <div class="material">
+            🌿
+            <h3>Natural Colours</h3>
+            <p>
+                Traditional colours can be created from
+                plants, minerals and natural materials.
+            </p>
+        </div>
+
+
+        <div class="material">
+            🧵
+            <h3>Threads</h3>
+            <p>
+                Threads are used in embroidery and
+                textile-based crafts.
+            </p>
+        </div>
+
+
+        <div class="material">
+            🪵
+            <h3>Wood</h3>
+            <p>
+                Wood is used for carving, toys and
+                decorative crafts.
+            </p>
+        </div>
+
+
+        <div class="material">
+            🏺
+            <h3>Clay</h3>
+            <p>
+                Clay is shaped into pottery, sculptures
+                and traditional objects.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <span>VISUAL JOURNEY</span>
+
+        <h2>Craft Gallery</h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <span>🎨</span>
+            <p>Traditional Painting</p>
+        </div>
+
+        <div class="gallery-item">
+            <span>🧵</span>
+            <p>Hand Embroidery</p>
+        </div>
+
+        <div class="gallery-item">
+            <span>🏺</span>
+            <p>Traditional Pottery</p>
+        </div>
+
+        <div class="gallery-item">
+            <span>🪵</span>
+            <p>Wood Craft</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRY THE ART -->
+
+<section class="try-section">
+
+    <div class="section-title">
+
+        <span>🎮 INTERACTIVE ACTIVITY</span>
+
+        <h2>Try the Art</h2>
+
+        <p>
+            Create your own simple digital pattern.
+        </p>
+
+    </div>
+
+
+    <div class="drawing-box">
+
+        <div class="drawing-tools">
+
+            <button onclick="drawCircle()">
+                ⭕ Circle
+            </button>
+
+            <button onclick="drawSquare()">
+                ⬛ Square
+            </button>
+
+            <button onclick="drawLine()">
+                ➖ Line
+            </button>
+
+            <button onclick="clearCanvas()">
+                🗑️ Clear
+            </button>
+
+        </div>
+
+
+        <canvas id="artCanvas"
+                width="700"
+                height="350">
+        </canvas>
+
+        <p>
+            Click the buttons and create your own pattern.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- DID YOU KNOW -->
+
+<section class="fact-section">
+
+    <div class="fact-card">
+
+        <span>💡 DID YOU KNOW?</span>
+
+        <h2 id="fact">
+            Many Indian crafts are closely connected
+            with the local environment and community.
+        </h2>
+
+        <button onclick="newFact()">
+            Another Fact →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<!-- QUIZ -->
+<section class="quiz-section" id="quiz">
+
+    <div class="quiz-card">
+
+        <span>🎯 TEST YOUR KNOWLEDGE</span>
+
+        <h2>Craft Challenge</h2>
+
+        <p id="question">
+            Madhubani painting is mainly associated with which state?
+        </p>
+
+        <div class="answers"></div>
+
+        <h3 id="result"></h3>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        CURIOSO 🇮🇳
+    </div>
+
+    <p>
+        Learn India through Play • Explore • Discover
+    </p>
+
+    <p>
+        © 2026 CURIOSO
+    </p>
+
+</footer>
+
+
+<script src="Art&Crafts.js"></script>
+
+</body>
+</html>

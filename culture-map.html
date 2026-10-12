@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="CURIOSO — Explore India's living culture state by state."
+  >
+
+  <title>CURIOSO — Explore India's Culture</title>
+
+  <!-- Global Website CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Culture Map CSS -->
+  <link rel="stylesheet" href="culture-map.css">
+</head>
+
+
+<body class="culture-map-page">
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+
+  <nav class="map-nav">
+
+    <a
+      href="index.html"
+      class="map-logo"
+      aria-label="CURIOSO Home"
+    >
+      <span class="logo-mark">C</span>
+      <span>CURIOSO</span>
+    </a>
+
+
+    <div class="nav-center">
+      INDIA • CULTURE • DISCOVERY
+    </div>
+
+
+    <a
+      href="index.html"
+      class="back-link"
+    >
+      <span>←</span>
+      Back to Home
+    </a>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main class="map-shell">
+
+
+    <!-- ===================================================
+         HERO SECTION
+         =================================================== -->
+
+    <section class="map-hero">
+
+
+      <!-- HERO TEXT -->
+
+      <div class="hero-copy">
+
+        <span class="map-tag">
+          <span>✦</span>
+          DISCOVER INDIA
+        </span>
+
+
+        <h1>
+          One country.<br>
+          <em>Countless cultures.</em>
+        </h1>
+
+
+        <p>
+          Explore India state by state through festivals,
+          traditional arts, dance forms and heritage.
+          Choose a state and start your cultural journey.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            href="#stateGrid"
+            class="primary-btn"
+          >
+            Explore states
+            <span>↓</span>
+          </a>
+
+
+          <span class="hero-note">
+            <i></i>
+            28 states • 4 culture areas
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- HERO CARD -->
+
+      <div
+        class="hero-card"
+        aria-label="CURIOSO Culture Journey"
+      >
+
+        <div class="hero-card-glow"></div>
+
+
+        <span class="hero-card-label">
+          YOUR CULTURE JOURNEY
+        </span>
+
+
+        <strong>
+          Discover<br>
+          something new.
+        </strong>
+
+
+        <div class="hero-card-bottom">
+
+          <span>🇮🇳</span>
+
+          <small>
+            Learn • Play • Explore
+          </small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         MAP AREA
+         =================================================== -->
+
+    <section
+      class="map-layout"
+      aria-label="Explore Indian states"
+    >
+
+
+      <!-- =================================================
+           LEFT CONTENT
+           ================================================= -->
+
+      <div class="india-board">
+
+
+        <!-- BOARD HEADER -->
+
+        <div class="board-head">
+
+
+          <div>
+
+            <span class="section-kicker">
+              EXPLORE
+            </span>
+
+
+            <h2>
+              Choose a state
+            </h2>
+
+          </div>
+
+
+
+          <!-- SEARCH -->
+
+          <div class="board-tools">
+
+            <label
+              class="search-box"
+              aria-label="Search states"
+            >
+
+              <span>⌕</span>
+
+              <input
+                id="stateSearch"
+                type="search"
+                placeholder="Search a state..."
+                autocomplete="off"
+              >
+
+            </label>
+
+
+            <span
+              id="stateCount"
+              class="state-count"
+            >
+              28 states
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             REGION FILTERS
+             ================================================= -->
+
+        <div
+          id="regionFilters"
+          class="region-filters"
+          aria-label="Filter states by region"
+        >
+
+          <button
+            type="button"
+            class="region-filter active"
+            data-region="All"
+          >
+            All
+          </button>
+
+
+          <button
+            type="button"
+            class="region-filter"
+            data-region="North"
+          >
+            North
+          </button>
+
+
+          <button
+            type="button"
+            class="region-filter"
+            data-region="South"
+          >
+            South
+          </button>
+
+
+          <button
+            type="button"
+            class="region-filter"
+            data-region="East"
+          >
+            East
+          </button>
+
+
+          <button
+            type="button"
+            class="region-filter"
+            data-region="West"
+          >
+            West
+          </button>
+
+
+          <button
+            type="button"
+            class="region-filter"
+            data-region="Central"
+          >
+            Central
+          </button>
+
+
+          <button
+            type="button"
+            class="region-filter"
+            data-region="North East"
+          >
+            North East
+          </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             INDIA MAP VISUAL
+             ================================================= -->
+
+        <div class="culture-map-visual">
+
+
+          <!-- MAP HEADER -->
+
+          <div class="map-visual-header">
+
+            <div>
+
+              <span class="section-kicker">
+                INDIA AT A GLANCE
+              </span>
+
+
+              <h3>
+                Explore India Through Culture
+              </h3>
+
+
+              <p>
+                Click a state on the map or choose a state
+                from the collection below to discover its
+                cultural stories.
+              </p>
+
+            </div>
+
+
+
+            <!-- LEGEND -->
+
+            <div class="map-legend">
+
+              <span>
+                <i class="legend-dot north"></i>
+                North
+              </span>
+
+
+              <span>
+                <i class="legend-dot south"></i>
+                South
+              </span>
+
+
+              <span>
+                <i class="legend-dot east"></i>
+                East
+              </span>
+
+
+              <span>
+                <i class="legend-dot west"></i>
+                West
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- =================================================
+               MAP STAGE
+               ================================================= -->
+
+          <div class="india-map-stage">
+
+
+            <!-- Decorative Elements -->
+
+            <div class="map-decoration decoration-one">
+              ✦
+            </div>
+
+
+            <div class="map-decoration decoration-two">
+              ✧
+            </div>
+
+
+
+            <!-- =================================================
+                 ACTUAL INDIA SVG
+                 ================================================= -->
+
+            <div class="india-svg-wrapper">
+
+              <img
+                src="https://simplemaps.com/static/svg/country/in/admin1/in.svg"
+                class="india-svg-map india-svg-fallback"
+                alt="Map of India showing Indian states"
+                loading="eager"
+                referrerpolicy="no-referrer"
+              >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MAP INSTRUCTION
+                 ================================================= -->
+
+            <div class="map-instruction">
+
+              <span>
+                ✦
+              </span>
+
+
+              <div>
+
+                <strong>
+                  Explore India
+                </strong>
+
+
+                <small>
+                  Click any state to discover its culture
+                </small>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FLOATING CARD — TOP
+                 ================================================= -->
+
+            <div class="map-floating-card floating-top">
+
+              <span>
+                ✦
+              </span>
+
+
+              <div>
+
+                <b>
+                  28 States
+                </b>
+
+
+                <small>
+                  One cultural journey
+                </small>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FLOATING CARD — BOTTOM
+                 ================================================= -->
+
+            <div class="map-floating-card floating-bottom">
+
+              <span>
+                🎨
+              </span>
+
+
+              <div>
+
+                <b>
+                  Culture Explorer
+                </b>
+
+
+                <small>
+                  Discover something new
+                </small>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STATE COLLECTION
+             ================================================= -->
+
+        <div
+          id="stateGrid"
+          class="state-grid"
+          aria-label="Indian states"
+        >
+        </div>
+
+
+
+        <!-- =================================================
+             NO RESULTS
+             ================================================= -->
+
+        <div
+          id="noResults"
+          class="no-results"
+          hidden
+        >
+
+          <span>
+            ⌕
+          </span>
+
+
+          <strong>
+            No state found
+          </strong>
+
+
+          <small>
+            Try another state or region.
+          </small>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           RIGHT CULTURAL SNAPSHOT PANEL
+           ================================================= -->
+
+      <aside
+        id="statePanel"
+        class="state-panel"
+        aria-live="polite"
+      >
+
+
+        <!-- DEFAULT EMPTY STATE -->
+
+        <div class="panel-empty">
+
+
+          <div class="empty-orbit">
+
+            <span>
+              🇮🇳
+            </span>
+
+          </div>
+
+
+          <span class="section-kicker">
+            CULTURAL SNAPSHOT
+          </span>
+
+
+          <h2>
+            Start exploring
+          </h2>
+
+
+          <p>
+            Select any state to reveal a quick cultural
+            snapshot and continue into CURIOSO.
+          </p>
+
+
+          <div class="empty-hint">
+
+            <span>
+              01
+            </span>
+
+            Choose a state from the collection
+
+          </div>
+
+
+        </div>
+
+      </aside>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CULTURE JOURNEY
+         =================================================== -->
+
+    <section
+      class="journey-strip"
+      aria-label="How CURIOSO works"
+    >
+
+
+      <!-- STEP 1 -->
+
+      <div class="journey-step">
+
+        <span class="step-number">
+          01
+        </span>
+
+
+        <div class="step-icon">
+          🗺️
+        </div>
+
+
+        <div>
+
+          <b>
+            Choose a state
+          </b>
+
+
+          <small>
+            Discover regional identity
+          </small>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- STEP 2 -->
+
+      <div class="journey-step">
+
+        <span class="step-number">
+          02
+        </span>
+
+
+        <div class="step-icon">
+          ✦
+        </div>
+
+
+        <div>
+
+          <b>
+            Explore culture
+          </b>
+
+
+          <small>
+            Festival • Art • Dance • Heritage
+          </small>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- STEP 3 -->
+
+      <div class="journey-step">
+
+        <span class="step-number">
+          03
+        </span>
+
+
+        <div class="step-icon">
+          🎮
+        </div>
+
+
+        <div>
+
+          <b>
+            Play & learn
+          </b>
+
+
+          <small>
+            Continue with quizzes and games
+          </small>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="map-footer">
+
+    <span>
+      © CURIOSO
+    </span>
+
+
+    <span>
+      Learn India Through Play
+    </span>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="culture-map.js"></script>
+
+</body>
+
+</html>

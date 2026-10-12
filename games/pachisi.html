@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pachisi / Chaupar | CURIOS Games</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="pachisi.css">
+</head>
+
+<body>
+
+<header class="pachisi-nav">
+
+    <a href="index.html" class="brand">
+        <span class="brand-mark">C</span>
+
+        <span class="brand-text">
+            <strong>CURIOSO</strong>
+            <small>CURIOS GAMES</small>
+        </span>
+    </a>
+
+    <div class="nav-game-title">
+        <span>STRATEGY BOARD GAME</span>
+        <strong>Pachisi / Chaupar</strong>
+    </div>
+
+    <a href="index.html" class="back-button">
+        ← Games
+    </a>
+
+</header>
+
+
+<main class="page">
+
+    <!-- GAME HEADER -->
+
+    <section class="game-header">
+
+        <div>
+
+            <span class="eyebrow">
+                CURIOS GAMES
+            </span>
+
+            <h1>
+                Pachisi /
+                <span>Chaupar</span>
+            </h1>
+
+            <p>
+                A strategy-focused digital adaptation inspired by
+                India's traditional cross-and-circle board-game tradition.
+            </p>
+
+        </div>
+
+
+        <div class="difficulty-control">
+
+            <label for="difficulty">
+                COMPUTER DIFFICULTY
+            </label>
+
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAME AREA -->
+
+    <section class="game-layout">
+
+        <!-- BOARD -->
+
+        <div class="board-card">
+
+            <div class="board-header">
+
+                <div class="player-label">
+                    <span class="you-dot"></span>
+                    YOU
+                </div>
+
+                <div
+                    id="turnLabel"
+                    class="turn-label"
+                >
+                    Your Turn
+                </div>
+
+                <div class="player-label">
+                    <span class="ai-dot"></span>
+                    COMPUTER
+                </div>
+
+            </div>
+
+
+            <div
+                id="pachisiBoard"
+                class="pachisi-board"
+            ></div>
+
+
+            <div class="board-legend">
+
+                <span>
+                    <i class="legend-you"></i>
+                    Your pieces
+                </span>
+
+                <span>
+                    <i class="legend-ai"></i>
+                    Computer pieces
+                </span>
+
+                <span>
+                    ✦ Safe square
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDE PANEL -->
+
+        <aside class="control-panel">
+
+            <!-- SCORE -->
+
+            <div class="score-card">
+
+                <div class="score-box">
+
+                    <span>YOU</span>
+
+                    <strong id="playerScore">
+                        0
+                    </strong>
+
+                    <small>Finished</small>
+
+                </div>
+
+                <div class="versus">
+                    VS
+                </div>
+
+                <div class="score-box ai-score">
+
+                    <span>COMPUTER</span>
+
+                    <strong id="computerScore">
+                        0
+                    </strong>
+
+                    <small>Finished</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- DICE -->
+
+            <div class="dice-card">
+
+                <span class="panel-title">
+                    DICE
+                </span>
+
+                <div
+                    id="dice"
+                    class="dice"
+                >
+                    1
+                </div>
+
+                <p id="statusText">
+                    Roll the dice to begin.
+                </p>
+
+                <button
+                    id="rollButton"
+                    class="roll-button"
+                >
+                    🎲 Roll Dice
+                </button>
+
+            </div>
+
+
+            <!-- INFO -->
+
+            <div class="info-card">
+
+                <div>
+                    <span>YOUR PIECES</span>
+                    <strong id="playerOnBoard">
+                        4
+                    </strong>
+                </div>
+
+                <div>
+                    <span>AI PIECES</span>
+                    <strong id="computerOnBoard">
+                        4
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+
+            <div class="control-buttons">
+
+                <button
+                    id="restartButton"
+                    class="secondary-button"
+                >
+                    ↻ Restart
+                </button>
+
+                <button
+                    id="rulesButton"
+                    class="secondary-button"
+                >
+                    ? Rules
+                </button>
+
+            </div>
+
+
+            <!-- AI THINKING -->
+
+            <div
+                id="thinking"
+                class="thinking"
+                hidden
+            >
+
+                <span class="thinking-spinner"></span>
+
+                <div>
+                    <strong>Computer is thinking</strong>
+                    <small>Evaluating legal moves...</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- MOVE CHOICE -->
+
+    <section
+        id="movePanel"
+        class="move-panel"
+        hidden
+    >
+
+        <div>
+
+            <span class="eyebrow">
+                YOUR MOVE
+            </span>
+
+            <h2>
+                Choose a piece
+            </h2>
+
+            <p>
+                Select one of the highlighted legal pieces.
+            </p>
+
+        </div>
+
+        <div
+            id="moveButtons"
+            class="move-buttons"
+        ></div>
+
+    </section>
+
+
+    <!-- RESULT -->
+
+    <div
+        id="resultModal"
+        class="result-overlay"
+        hidden
+    >
+
+        <div class="result-card">
+
+            <div
+                id="resultIcon"
+                class="result-icon"
+            >
+                🏆
+            </div>
+
+            <span class="eyebrow">
+                GAME COMPLETE
+            </span>
+
+            <h2 id="resultTitle">
+                You Win!
+            </h2>
+
+            <p id="resultMessage">
+                All your pieces reached the finish.
+            </p>
+
+            <div class="result-buttons">
+
+                <button
+                    id="playAgain"
+                    class="primary-button"
+                >
+                    Play Again
+                </button>
+
+                <a
+                    href="index.html"
+                    class="secondary-link"
+                >
+                    Choose Another Game
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CULTURAL INFORMATION -->
+
+    <section class="culture-section">
+
+        <div class="culture-card">
+
+            <span class="eyebrow">
+                CULTURAL DISCOVERY
+            </span>
+
+            <h2>
+                More than a
+                <span>board game</span>
+            </h2>
+
+            <p>
+                Pachisi and related cross-and-circle board-game traditions
+                have a long history in the Indian subcontinent. CURIOS
+                presents this version as a simplified digital adaptation
+                designed to introduce players to the strategic idea of
+                the traditional game.
+            </p>
+
+            <div class="culture-points">
+
+                <div>
+                    <strong>01</strong>
+                    <span>Learn</span>
+                    <p>
+                        Discover the cultural context of the game.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Strategize</span>
+                    <p>
+                        Choose between legal moves and protect your pieces.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Play</span>
+                    <p>
+                        Challenge a computer opponent.
+                    </p>
+                </div>
+
+            </div>
+
+            <small class="adaptation-note">
+                CURIOS digital adaptation — rules simplified for
+                browser-based educational gameplay.
+            </small>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <span>
+        CURIOSO — Learn India Through Play
+    </span>
+
+    <a href="index.html">
+        ← Back to CURIOS Games
+    </a>
+
+</footer>
+
+
+<script src="pachisi.js"></script>
+
+</body>
+</html>

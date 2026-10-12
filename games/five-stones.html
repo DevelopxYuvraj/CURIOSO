@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Five Stones / Gutte | CURIOS Games</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="five-stones.css"
+    >
+</head>
+
+<body>
+
+<header class="game-nav">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-mark">C</span>
+
+        <span class="brand-text">
+            <strong>CURIOSO</strong>
+            <small>CURIOS GAMES</small>
+        </span>
+
+    </a>
+
+
+    <div class="nav-title">
+
+        <span>SKILL • REFLEX</span>
+
+        <strong>
+            Five Stones / Gutte
+        </strong>
+
+    </div>
+
+
+    <a
+        href="index.html"
+        class="back-button"
+    >
+        ← Games
+    </a>
+
+</header>
+
+
+<main class="page">
+
+    <section class="game-header">
+
+        <div>
+
+            <span class="eyebrow">
+                CURIOS GAMES
+            </span>
+
+            <h1>
+                Five Stones /
+                <span>Gutte</span>
+            </h1>
+
+            <p>
+                Test your timing, coordination and reflexes
+                in this digital skill challenge.
+            </p>
+
+        </div>
+
+
+        <div class="difficulty-box">
+
+            <label for="difficulty">
+                DIFFICULTY
+            </label>
+
+            <select id="difficulty">
+
+                <option value="easy">
+                    Easy
+                </option>
+
+                <option
+                    value="medium"
+                    selected
+                >
+                    Medium
+                </option>
+
+                <option value="hard">
+                    Hard
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <section class="game-layout">
+
+        <div class="game-card">
+
+            <div class="game-topbar">
+
+                <div>
+                    <span>ROUND</span>
+                    <strong id="roundNumber">
+                        1
+                    </strong>
+                </div>
+
+                <div>
+                    <span>SCORE</span>
+                    <strong id="score">
+                        0
+                    </strong>
+                </div>
+
+                <div>
+                    <span>LIVES</span>
+                    <strong id="lives">
+                        3
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div
+                id="playArea"
+                class="play-area"
+            >
+
+                <div class="instruction">
+
+                    <span id="instructionTitle">
+                        Ready?
+                    </span>
+
+                    <p id="instructionText">
+                        Toss the stone and pick up
+                        the required stones.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="stones"
+                    class="stones"
+                ></div>
+
+
+                <div
+                    id="airStone"
+                    class="air-stone"
+                >
+                    🪨
+                </div>
+
+
+                <div
+                    id="timer"
+                    class="timer"
+                >
+                    —
+                </div>
+
+            </div>
+
+
+            <div class="controls">
+
+                <button
+                    id="startButton"
+                    class="primary-button"
+                >
+                    🪨 Start Round
+                </button>
+
+                <button
+                    id="pickupButton"
+                    class="pickup-button"
+                    disabled
+                >
+                    Pick Up
+                </button>
+
+            </div>
+
+
+            <div
+                id="message"
+                class="message"
+            >
+                Press Start Round to begin.
+            </div>
+
+        </div>
+
+
+        <aside class="side-panel">
+
+            <div class="phase-card">
+
+                <span>
+                    CURRENT PHASE
+                </span>
+
+                <strong id="phase">
+                    Ready
+                </strong>
+
+                <p id="phaseDescription">
+                    Complete each challenge
+                    to progress.
+                </p>
+
+            </div>
+
+
+            <div class="progress-card">
+
+                <span>
+                    ROUND PROGRESS
+                </span>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress"
+                    ></div>
+
+                </div>
+
+                <small id="progressText">
+                    0 / 5
+                </small>
+
+            </div>
+
+
+            <button
+                id="restartButton"
+                class="secondary-button"
+            >
+                ↻ Restart Game
+            </button>
+
+
+            <div class="tip-card">
+
+                <span>
+                    TIP
+                </span>
+
+                <p>
+                    Watch the airborne stone carefully.
+                    Timing matters more than speed.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <section class="culture-section">
+
+        <div class="culture-card">
+
+            <span class="eyebrow">
+                CULTURAL DISCOVERY
+            </span>
+
+            <h2>
+                A simple game of
+                <span>skill and coordination</span>
+            </h2>
+
+            <p>
+                Five Stones, also known in different
+                regional contexts by names such as Gutte,
+                is traditionally played using small stones
+                or similar objects. Players toss one object,
+                perform a pickup action and catch the tossed
+                object.
+            </p>
+
+            <div class="culture-grid">
+
+                <div>
+                    <strong>01</strong>
+                    <h3>Timing</h3>
+                    <p>
+                        Coordinate the toss and pickup.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <h3>Reflex</h3>
+                    <p>
+                        React before the airborne stone lands.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <h3>Precision</h3>
+                    <p>
+                        Complete increasingly difficult rounds.
+                    </p>
+                </div>
+
+            </div>
+
+            <small class="adaptation">
+                CURIOS digital adaptation — simplified
+                browser gameplay inspired by traditional
+                Five Stones / Gutte play.
+            </small>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    id="resultModal"
+    class="result-overlay"
+    hidden
+>
+
+    <div class="result-card">
+
+        <div id="resultIcon" class="result-icon">
+            🏆
+        </div>
+
+        <span class="eyebrow">
+            GAME COMPLETE
+        </span>
+
+        <h2 id="resultTitle">
+            Great Job!
+        </h2>
+
+        <p id="resultText">
+            You completed the challenge.
+        </p>
+
+        <button
+            id="playAgain"
+            class="primary-button"
+        >
+            Play Again
+        </button>
+
+        <a
+            href="index.html"
+            class="choose-game"
+        >
+            Choose Another Game
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer class="footer">
+
+    <span>
+        CURIOSO — Learn India Through Play
+    </span>
+
+    <a href="index.html">
+        ← Back to CURIOS Games
+    </a>
+
+</footer>
+
+
+<script src="five-stones.js"></script>
+
+</body>
+</html>

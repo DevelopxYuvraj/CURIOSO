@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chowka Bhara | CURIOS Games</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="chowka-bhara.css">
+</head>
+
+<body>
+
+<header class="game-nav">
+
+    <a href="index.html" class="brand">
+        <span class="brand-mark">C</span>
+
+        <span class="brand-text">
+            <strong>CURIOSO</strong>
+            <small>CURIOS GAMES</small>
+        </span>
+    </a>
+
+    <div class="nav-title">
+        <span>STRATEGY • BOARD</span>
+        <strong>Chowka Bhara</strong>
+    </div>
+
+    <a href="index.html" class="back-button">
+        ← Games
+    </a>
+
+</header>
+
+
+<main class="page">
+
+    <section class="game-header">
+
+        <div>
+            <span class="eyebrow">CURIOS GAMES</span>
+
+            <h1>
+                Chowka <span>Bhara</span>
+            </h1>
+
+            <p>
+                Move your pieces strategically, capture opponents
+                and bring all your pieces safely home.
+            </p>
+        </div>
+
+        <div class="difficulty-box">
+
+            <label for="difficulty">
+                COMPUTER DIFFICULTY
+            </label>
+
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <section class="game-layout">
+
+        <div class="board-card">
+
+            <div class="turn-bar">
+
+                <span class="player-label">
+                    <i class="player-dot"></i>
+                    YOU
+                </span>
+
+                <strong id="turnLabel">
+                    Your Turn
+                </strong>
+
+                <span class="player-label">
+                    <i class="computer-dot"></i>
+                    COMPUTER
+                </span>
+
+            </div>
+
+
+            <div class="board-wrapper">
+                <div id="gameBoard" class="game-board"></div>
+            </div>
+
+
+            <div class="dice-area">
+
+                <div id="dice" class="dice">
+                    ?
+                </div>
+
+                <div class="dice-info">
+                    <span>ROLL</span>
+                    <strong id="diceResult">
+                        Roll to begin
+                    </strong>
+                </div>
+
+                <button
+                    id="rollButton"
+                    class="roll-button"
+                >
+                    Roll Dice
+                </button>
+
+            </div>
+
+
+            <div id="message" class="message">
+                Roll the dice to start.
+            </div>
+
+        </div>
+
+
+        <aside class="control-panel">
+
+            <div class="score-card">
+
+                <div>
+                    <span>YOU</span>
+                    <strong id="playerHome">0</strong>
+                    <small>Home</small>
+                </div>
+
+                <div class="vs">VS</div>
+
+                <div>
+                    <span>COMPUTER</span>
+                    <strong id="computerHome">0</strong>
+                    <small>Home</small>
+                </div>
+
+            </div>
+
+
+            <div class="status-card">
+
+                <span class="panel-label">
+                    GAME STATUS
+                </span>
+
+                <div id="statusIcon" class="status-icon">
+                    🪙
+                </div>
+
+                <p id="statusText">
+                    Roll the dice.
+                </p>
+
+            </div>
+
+
+            <div class="pieces-card">
+
+                <div>
+                    <span>YOUR PIECES</span>
+                    <strong id="playerProgress">
+                        0 / 4
+                    </strong>
+                </div>
+
+                <div>
+                    <span>AI PIECES</span>
+                    <strong id="computerProgress">
+                        0 / 4
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <button
+                id="restartButton"
+                class="restart-button"
+            >
+                ↻ Restart Game
+            </button>
+
+
+            <div
+                id="thinking"
+                class="thinking"
+                hidden
+            >
+                <span class="spinner"></span>
+
+                <div>
+                    <strong>Computer is thinking...</strong>
+                    <small>Choosing a move</small>
+                </div>
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <section class="culture-section">
+
+        <div class="culture-card">
+
+            <span class="eyebrow">
+                CULTURAL DISCOVERY
+            </span>
+
+            <h2>
+                A traditional
+                <span>race-board game</span>
+            </h2>
+
+            <p>
+                Chowka Bhara is a traditional Indian board game
+                played in regional forms. Rules and layouts can
+                vary across communities. CURIOS presents a
+                simplified digital adaptation for learning and play.
+            </p>
+
+            <div class="culture-grid">
+
+                <div>
+                    <strong>01</strong>
+                    <h3>Roll</h3>
+                    <p>
+                        Roll to determine your available movement.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <h3>Move</h3>
+                    <p>
+                        Select a piece and plan your route.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <h3>Capture</h3>
+                    <p>
+                        Land on an opponent and send the piece back.
+                    </p>
+                </div>
+
+            </div>
+
+            <small class="adaptation">
+                CURIOS digital adaptation — simplified rules.
+            </small>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    id="resultModal"
+    class="result-overlay"
+    hidden
+>
+
+    <div class="result-card">
+
+        <div id="resultIcon" class="result-icon">
+            🏆
+        </div>
+
+        <span class="eyebrow">
+            GAME COMPLETE
+        </span>
+
+        <h2 id="resultTitle">
+            You Win!
+        </h2>
+
+        <p id="resultText">
+            All your pieces reached home.
+        </p>
+
+        <button
+            id="playAgain"
+            class="play-again"
+        >
+            Play Again
+        </button>
+
+        <a
+            href="index.html"
+            class="choose-game"
+        >
+            Choose Another Game
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer class="footer">
+
+    <span>
+        CURIOSO — Learn India Through Play
+    </span>
+
+    <a href="index.html">
+        ← Back to CURIOS Games
+    </a>
+
+</footer>
+
+
+<script src="chowka-bhara.js"></script>
+
+</body>
+</html>

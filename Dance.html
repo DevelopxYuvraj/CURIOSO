@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CURIOSO | Indian Dance</title>
+
+    <link rel="stylesheet" href="Dance.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        CURIOSO 🇮🇳
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#dances">Dance Forms</a>
+        <a href="#story">Story</a>
+        <a href="#steps">Learn Steps</a>
+        <a href="#quiz">Quiz</a>
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="tag">INDIAN CULTURE • DANCE</span>
+
+        <h1>
+            The Rhythm of <span>India</span>
+        </h1>
+
+        <p>
+            Discover India's traditional dances, their stories,
+            costumes, music and cultural meaning.
+        </p>
+
+        <a href="#dances" class="hero-btn">
+            Explore Dance Forms ↓
+        </a>
+
+    </div>
+
+    <div class="hero-art">
+        💃
+    </div>
+
+</section>
+
+
+<!-- ================= DANCE SELECTOR ================= -->
+
+<section class="section" id="dances">
+
+    <div class="section-heading">
+
+        <span>EXPLORE</span>
+
+        <h2>
+            India's Traditional Dance Forms
+        </h2>
+
+        <p>
+            Select a dance to discover its origin, costume,
+            instruments and cultural story.
+        </p>
+
+    </div>
+
+
+   <div class="dance-buttons">
+
+    <button onclick="showDance('kuchipudi')">Kuchipudi</button>
+    <button onclick="showDance('ponung')">Ponung</button>
+    <button onclick="showDance('bihuDance')">Bihu Dance</button>
+    <button onclick="showDance('jatJatin')">Jat-Jatin</button>
+    <button onclick="showDance('panthi')">Panthi</button>
+    <button onclick="showDance('fugdi')">Fugdi</button>
+    <button onclick="showDance('garba')">Garba</button>
+    <button onclick="showDance('dhamal')">Dhamal</button>
+    <button onclick="showDance('nati')">Nati</button>
+    <button onclick="showDance('chhau')">Chhau</button>
+    <button onclick="showDance('yakshagana')">Yakshagana</button>
+    <button onclick="showDance('kathakali')">Kathakali</button>
+    <button onclick="showDance('matki')">Matki</button>
+    <button onclick="showDance('lavani')">Lavani</button>
+    <button onclick="showDance('manipuri')">Manipuri</button>
+    <button onclick="showDance('shadSukMynsiem')">Shad Suk Mynsiem</button>
+    <button onclick="showDance('cheraw')">Cheraw</button>
+    <button onclick="showDance('changLo')">Chang Lo</button>
+    <button onclick="showDance('odissi')">Odissi</button>
+    <button onclick="showDance('bhangra')">Bhangra</button>
+    <button onclick="showDance('ghoomar')">Ghoomar</button>
+    <button onclick="showDance('singhiChham')">Singhi Chham</button>
+    <button onclick="showDance('bharatanatyam')">Bharatanatyam</button>
+    <button onclick="showDance('perini')">Perini Shivatandavam</button>
+    <button onclick="showDance('hojagiri')">Hojagiri</button>
+    <button onclick="showDance('kathak')">Kathak</button>
+    <button onclick="showDance('chholiya')">Chholiya</button>
+    <button onclick="showDance('puruliaChhau')">Purulia Chhau</button>
+
+</div>
+
+
+    <!-- Dynamic Dance Information -->
+
+    <div class="dance-info" id="danceInfo">
+
+        <div class="dance-icon">
+            💃
+        </div>
+
+        <div>
+
+            <h3>Select a Dance Form</h3>
+
+            <p>
+                Click on any dance form above to explore
+                its cultural story.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STORY ================= -->
+
+<section class="story-section" id="story">
+
+    <div class="story-text">
+
+        <span class="small-title">
+            MORE THAN MOVEMENT
+        </span>
+
+        <h2>
+            Every Dance Tells a Story
+        </h2>
+
+        <p>
+            Indian dance is not only about movement. It is a
+            beautiful combination of expression, music,
+            storytelling and tradition.
+        </p>
+
+        <p>
+            Different regions of India developed their own
+            dance traditions, reflecting their history,
+            festivals, beliefs and everyday life.
+        </p>
+
+        <div class="story-points">
+
+            <div>
+                <strong>01</strong>
+                <span>Expression</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Music</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Storytelling</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>Tradition</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="story-card">
+
+        <div class="big-dancer">
+            🕺
+        </div>
+
+        <h3>
+            Dance connects generations
+        </h3>
+
+        <p>
+            Traditional dances help preserve India's
+            cultural identity and pass knowledge from
+            one generation to another.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COSTUME & MUSIC ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span>DISCOVER</span>
+
+        <h2>
+            Behind the Performance
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                👗
+            </div>
+
+            <h3>Traditional Costume</h3>
+
+            <p>
+                Costumes are an important part of Indian dance.
+                Colours, jewellery and clothing often reflect
+                regional traditions.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🥁
+            </div>
+
+            <h3>Music & Instruments</h3>
+
+            <p>
+                Tabla, mridangam, dhol, flute and other
+                traditional instruments create the rhythm
+                of different dance forms.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                👁️
+            </div>
+
+            <h3>Expressions</h3>
+
+            <p>
+                Facial expressions, hand gestures and body
+                movements help dancers communicate stories
+                without words.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LEARN STEPS ================= -->
+
+<section class="steps-section" id="steps">
+
+    <div class="section-heading">
+
+        <span>TRY IT</span>
+
+        <h2>
+            Learn the Basic Rhythm
+        </h2>
+
+        <p>
+            Experience the rhythm of Indian dance.
+            Click the steps in the correct order.
+        </p>
+
+    </div>
+
+
+    <div class="step-box">
+
+        <div class="step-display" id="stepDisplay">
+            Ready?
+        </div>
+
+
+        <div class="step-buttons">
+
+            <button onclick="danceStep('LEFT')">
+                ← LEFT
+            </button>
+
+            <button onclick="danceStep('RIGHT')">
+                RIGHT →
+            </button>
+
+            <button onclick="danceStep('CLAP')">
+                👏 CLAP
+            </button>
+
+            <button onclick="resetSteps()">
+                RESET
+            </button>
+
+        </div>
+
+        <p id="stepMessage">
+            Start your rhythm!
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DID YOU KNOW ================= -->
+
+<section class="fact-section">
+
+    <div class="fact-card">
+
+        <span>💡 DID YOU KNOW?</span>
+
+        <h2 id="fact">
+            Indian classical dance combines movement,
+            music and storytelling.
+        </h2>
+
+        <button onclick="newFact()">
+            Another Fact
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUIZ ================= -->
+
+<section class="quiz-section" id="quiz">
+
+    <div class="section-heading">
+
+        <span>TEST YOUR KNOWLEDGE</span>
+
+        <h2>
+            Guess the Dance
+        </h2>
+
+        <p>
+            Let's see how much you learned!
+        </p>
+
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="quiz-number" id="quizNumber">
+            Question 1 / 5
+        </div>
+
+        <h3 id="quizQuestion">
+            Which dance form is traditionally associated
+            with Punjab?
+        </h3>
+
+
+        <div class="options">
+
+            <button onclick="checkAnswer(0)">
+                Garba
+            </button>
+
+            <button onclick="checkAnswer(1)">
+                Bhangra
+            </button>
+
+            <button onclick="checkAnswer(2)">
+                Kathak
+            </button>
+
+            <button onclick="checkAnswer(3)">
+                Odissi
+            </button>
+
+        </div>
+
+
+        <p id="quizResult"></p>
+
+        <div class="score">
+            🏆 Dance Points:
+            <span id="score">0</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        CURIOSO 🇮🇳
+    </div>
+
+    <p>
+        Learn India through Play • Discover • Explore • Preserve
+    </p>
+
+    <p class="copyright">
+        © 2026 CURIOSO | Indian Culture Learning Platform
+    </p>
+
+</footer>
+
+
+<script src="Dance.js"></script>
+
+</body>
+</html>

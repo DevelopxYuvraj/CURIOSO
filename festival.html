@@ -1,0 +1,1113 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CURIOSO | Indian Festivals</title>
+
+    <link rel="stylesheet" href="festival.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        CURIOSO 🇮🇳
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="#festivals">Festivals</a>
+
+        <a href="#story">Festival Story</a>
+
+        <a href="#quiz">Quiz</a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span>
+            🇮🇳 CELEBRATE INDIA
+        </span>
+
+        <h1>
+            Festivals That Tell<br>
+            India's Story
+        </h1>
+
+        <p>
+            Explore the colors, traditions, stories, food and celebrations
+            that make India's culture unique.
+        </p>
+
+        <a href="#festivals" class="hero-btn">
+            Explore Festivals ↓
+        </a>
+
+    </div>
+
+
+    <div class="hero-art">
+
+        <img
+            src="images/festivals/diwali.jpg"
+            alt="Indian Festival"
+        >
+
+        <div class="hero-art-overlay"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FESTIVAL SELECTOR ================= -->
+
+<section class="section" id="festivals">
+
+    <div class="section-title">
+
+        <span>
+            DISCOVER
+        </span>
+
+        <h2>
+            India's Festivals
+        </h2>
+
+        <p>
+            Choose a festival and discover its story.
+        </p>
+
+    </div>
+
+
+    <div class="festival-grid">
+
+
+        <!-- 1 -->
+
+        <button type="button" class="festival-card active"
+                onclick="showFestival('ugadi', this)">
+
+           <div class="festival-image">
+    <img src="images/festivals/Ugadi.jpg" alt="Ugadi">
+</div>
+
+            <h3>
+                Ugadi
+            </h3>
+
+            <p>
+                Andhra Pradesh
+            </p>
+
+        </button>
+
+
+
+        <!-- 2 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('losar', this)">
+
+            <div class="festival-image">
+    <img src="images/festivals/Losar.jpg" alt="Losar">
+</div>
+
+            <h3>
+                Losar
+            </h3>
+
+            <p>
+                Arunachal Pradesh
+            </p>
+
+        </button>
+
+
+
+        <!-- 3 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('bihu', this)">
+
+            <div class="festival-icon">
+                🌾
+            </div>
+
+            <h3>
+                Bihu
+            </h3>
+
+            <p>
+                Assam
+            </p>
+
+        </button>
+
+
+
+        <!-- 4 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('chhath', this)">
+
+            <div class="festival-icon">
+                ☀️
+            </div>
+
+            <h3>
+                Chhath Puja
+            </h3>
+
+            <p>
+                Bihar
+            </p>
+
+        </button>
+
+
+
+        <!-- 5 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('bastar', this)">
+
+            <div class="festival-icon">
+                🎭
+            </div>
+
+            <h3>
+                Bastar Dussehra
+            </h3>
+
+            <p>
+                Chhattisgarh
+            </p>
+
+        </button>
+
+
+
+        <!-- 6 -->
+
+        <button type="button" class="festival-card"
+               onclick="showFestival('goa', this)">
+
+            <div class="festival-icon">
+                🎉
+            </div>
+
+            <h3>
+                Goa Carnival
+            </h3>
+
+            <p>
+                Goa
+            </p>
+
+        </button>
+
+
+
+        <!-- 7 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('navratri', this)">
+
+            <div class="festival-icon">
+                🪔
+            </div>
+
+            <h3>
+                Navratri
+            </h3>
+
+            <p>
+                Gujarat
+            </p>
+
+        </button>
+
+
+
+        <!-- 8 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('teej', this)">
+
+            <div class="festival-icon">
+                🌸
+            </div>
+
+            <h3>
+                Teej
+            </h3>
+
+            <p>
+                Haryana
+            </p>
+
+        </button>
+
+
+
+        <!-- 9 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('kullu', this)">
+
+            <div class="festival-icon">
+                🏔️
+            </div>
+
+            <h3>
+                Kullu Dussehra
+            </h3>
+
+            <p>
+                Himachal Pradesh
+            </p>
+
+        </button>
+
+
+
+        <!-- 10 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('sarhul', this)">
+
+            <div class="festival-icon">
+                🌳
+            </div>
+
+            <h3>
+                Sarhul
+            </h3>
+
+            <p>
+                Jharkhand
+            </p>
+
+        </button>
+
+
+
+        <!-- 11 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('mysore', this)">
+
+            <div class="festival-icon">
+                👑
+            </div>
+
+            <h3>
+                Mysore Dasara
+            </h3>
+
+            <p>
+                Karnataka
+            </p>
+
+        </button>
+
+
+
+        <!-- 12 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('onam', this)">
+
+            <div class="festival-icon">
+                🌺
+            </div>
+
+            <h3>
+                Onam
+            </h3>
+
+            <p>
+                Kerala
+            </p>
+
+        </button>
+
+
+
+        <!-- 13 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('khajuraho', this)">
+
+            <div class="festival-icon">
+                💃
+            </div>
+
+            <h3>
+                Khajuraho Dance Festival
+            </h3>
+
+            <p>
+                Madhya Pradesh
+            </p>
+
+        </button>
+
+
+
+        <!-- 14 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('ganesh', this)">
+
+            <div class="festival-icon">
+                🐘
+            </div>
+
+            <h3>
+                Ganesh Chaturthi
+            </h3>
+
+            <p>
+                Maharashtra
+            </p>
+
+        </button>
+
+
+
+        <!-- 15 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('yaoshang', this)">
+
+            <div class="festival-icon">
+                🌺
+            </div>
+
+            <h3>
+                Yaoshang
+            </h3>
+
+            <p>
+                Manipur
+            </p>
+
+        </button>
+
+
+
+        <!-- 16 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('wangala', this)">
+
+            <div class="festival-icon">
+                🥁
+            </div>
+
+            <h3>
+                Wangala
+            </h3>
+
+            <p>
+                Meghalaya
+            </p>
+
+        </button>
+
+
+
+        <!-- 17 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('chapchar', this)">
+
+            <div class="festival-icon">
+                🎋
+            </div>
+
+            <h3>
+                Chapchar Kut
+            </h3>
+
+            <p>
+                Mizoram
+            </p>
+
+        </button>
+
+
+
+        <!-- 18 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('hornbill', this)">
+
+            <div class="festival-icon">
+                🪶
+            </div>
+
+            <h3>
+                Hornbill Festival
+            </h3>
+
+            <p>
+                Nagaland
+            </p>
+
+        </button>
+
+
+
+        <!-- 19 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('rath', this)">
+
+            <div class="festival-icon">
+                🛕
+            </div>
+
+            <h3>
+                Rath Yatra
+            </h3>
+
+            <p>
+                Odisha
+            </p>
+
+        </button>
+
+
+
+        <!-- 20 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('baisakhi', this)">
+
+            <div class="festival-icon">
+                🌾
+            </div>
+
+            <h3>
+                Baisakhi
+            </h3>
+
+            <p>
+                Punjab
+            </p>
+
+        </button>
+
+
+
+        <!-- 21 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('pushkar', this)">
+
+            <div class="festival-icon">
+                🐪
+            </div>
+
+            <h3>
+                Pushkar Fair
+            </h3>
+
+            <p>
+                Rajasthan
+            </p>
+
+        </button>
+
+
+
+        <!-- 22 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('sikkimLosar', this)">
+
+            <div class="festival-icon">
+                ⛰️
+            </div>
+
+            <h3>
+                Losar
+            </h3>
+
+            <p>
+                Sikkim
+            </p>
+
+        </button>
+
+
+
+        <!-- 23 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('pongal', this)">
+
+            <div class="festival-icon">
+                🌾
+            </div>
+
+            <h3>
+                Pongal
+            </h3>
+
+            <p>
+                Tamil Nadu
+            </p>
+
+        </button>
+
+
+
+        <!-- 24 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('bathukamma', this)">
+
+            <div class="festival-icon">
+                🌸
+            </div>
+
+            <h3>
+                Bathukamma
+            </h3>
+
+            <p>
+                Telangana
+            </p>
+
+        </button>
+
+
+
+        <!-- 25 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('kharchi', this)">
+
+            <div class="festival-icon">
+                🛕
+            </div>
+
+            <h3>
+                Kharchi Puja
+            </h3>
+
+            <p>
+                Tripura
+            </p>
+
+        </button>
+
+
+
+        <!-- 26 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('holi', this)">
+
+            <div class="festival-icon">
+                🎨
+            </div>
+
+            <h3>
+                Holi
+            </h3>
+
+            <p>
+                Uttar Pradesh
+            </p>
+
+        </button>
+
+
+
+        <!-- 27 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('harela', this)">
+
+            <div class="festival-icon">
+                🌱
+            </div>
+
+            <h3>
+                Harela
+            </h3>
+
+            <p>
+                Uttarakhand
+            </p>
+
+        </button>
+
+
+
+        <!-- 28 -->
+
+        <button type="button" class="festival-card"
+                onclick="showFestival('durga', this)">
+
+            <div class="festival-icon">
+                🪔
+            </div>
+
+            <h3>
+                Durga Puja
+            </h3>
+
+            <p>
+                West Bengal
+            </p>
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FESTIVAL STORY ================= -->
+
+<section class="story-section" id="story">
+
+
+    <div class="story-image">
+
+        <div id="festivalEmoji">
+
+            <img
+                src="images/festivals/diwali.jpg"
+                alt="Festival"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <div class="story-content">
+
+        <span class="small-title">
+            ✨ FESTIVAL STORY
+        </span>
+
+
+        <h2 id="festivalTitle">
+            Ugadi
+        </h2>
+
+
+        <p id="festivalDescription">
+            Select a festival to discover its cultural story.
+        </p>
+
+
+        <div class="info-grid">
+
+
+            <div class="info-box">
+
+                <span>📍</span>
+
+                <strong>
+                    Region
+                </strong>
+
+                <p id="festivalRegion">
+                    Andhra Pradesh
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>📅</span>
+
+                <strong>
+                    Festival
+                </strong>
+
+                <p id="festivalTime">
+                    Ugadi
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>🎯</span>
+
+                <strong>
+                    Meaning
+                </strong>
+
+                <p id="festivalMeaning">
+                    New beginning
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>🎵</span>
+
+                <strong>
+                    Tradition
+                </strong>
+
+                <p id="festivalTradition">
+                    Traditional celebration
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CULTURAL TRADITIONS ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <span>
+            EXPERIENCE
+        </span>
+
+        <h2>
+            Festival Traditions
+        </h2>
+
+    </div>
+
+
+    <div class="tradition-grid">
+
+
+        <div class="tradition-card">
+
+            <div class="tradition-icon">
+                👗
+            </div>
+
+            <h3>
+                Traditional Dress
+            </h3>
+
+            <p>
+                Festivals bring people together in beautiful
+                traditional clothing representing regional culture.
+            </p>
+
+        </div>
+
+
+        <div class="tradition-card">
+
+            <div class="tradition-icon">
+                🍛
+            </div>
+
+            <h3>
+                Festival Food
+            </h3>
+
+            <p>
+                Every festival has special dishes and sweets
+                prepared and shared with family and friends.
+            </p>
+
+        </div>
+
+
+        <div class="tradition-card">
+
+            <div class="tradition-icon">
+                🎵
+            </div>
+
+            <h3>
+                Music & Dance
+            </h3>
+
+            <p>
+                Music, folk songs and traditional dances add
+                energy and celebration to Indian festivals.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CULTURAL VALUES ================= -->
+
+<section class="values-section">
+
+    <div class="section-title">
+
+        <span>
+            MORE THAN A CELEBRATION
+        </span>
+
+        <h2>
+            What Festivals Teach Us
+        </h2>
+
+    </div>
+
+
+    <div class="values">
+
+
+        <div>
+
+            <span>
+                🤝
+            </span>
+
+            <h3>
+                Unity
+            </h3>
+
+            <p>
+                Festivals bring communities together.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                ❤️
+            </span>
+
+            <h3>
+                Family
+            </h3>
+
+            <p>
+                Celebrations strengthen relationships.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                🌱
+            </span>
+
+            <h3>
+                Tradition
+            </h3>
+
+            <p>
+                Culture is passed from one generation to another.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                🕊️
+            </span>
+
+            <h3>
+                Harmony
+            </h3>
+
+            <p>
+                Different communities celebrate India's diversity.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DID YOU KNOW ================= -->
+
+<section class="fact-section">
+
+    <div class="fact-card">
+
+        <span>
+            💡 DID YOU KNOW?
+        </span>
+
+        <h2 id="factText">
+            India celebrates a wide variety of festivals
+            across its different states and regions.
+        </h2>
+
+        <button onclick="newFact()">
+            Show Another Fact →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= QUIZ ================= -->
+
+<section class="quiz-section" id="quiz">
+
+    <div class="quiz-card">
+
+        <span>
+            🎮 TEST YOUR KNOWLEDGE
+        </span>
+
+        <h2>
+            Festival Challenge
+        </h2>
+
+        <p id="question">
+            Which festival is associated with Uttar Pradesh?
+        </p>
+
+
+        <div class="answers">
+
+            <button onclick="checkAnswer(this, true)">
+                Holi
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Onam
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Bihu
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Pongal
+            </button>
+
+        </div>
+
+
+        <p
+            class="quiz-result"
+            id="quizResult">
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        CURIOSO 🇮🇳
+    </div>
+
+    <p>
+        Learn India through Play • Explore • Discover
+    </p>
+
+    <p class="copyright">
+        © 2026 CURIOSO — Celebrating India's Cultural Heritage
+    </p>
+
+</footer>
+
+
+
+<script src="festival.js"></script>
+
+</body>
+
+</html>
+/* AUTO LOAD FESTIVAL IMAGES */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.querySelectorAll(".festival-card").forEach(function (card) {
+
+        const imageBox = card.querySelector(".festival-image");
+
+        if (!imageBox) return;
+
+        const onclickCode = card.getAttribute("onclick");
+
+        if (!onclickCode) return;
+
+        const match = onclickCode.match(/showFestival\(['"]([^'"]+)['"]/);
+
+        if (!match) return;
+
+        const festivalKey = match[1];
+        const festival = festivals[festivalKey];
+
+        if (!festival) return;
+
+        imageBox.innerHTML = `
+            <img 
+                src="${festival.image}" 
+                alt="${festival.title}"
+                loading="lazy"
+            >
+        `;
+
+    });
+
+});

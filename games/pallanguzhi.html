@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pallanguzhi | CURIOS Games</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="pallanguzhi.css"
+    >
+</head>
+
+<body>
+
+<header class="game-nav">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-mark">
+            C
+        </span>
+
+        <span class="brand-text">
+            <strong>CURIOSO</strong>
+            <small>CURIOS GAMES</small>
+        </span>
+
+    </a>
+
+
+    <div class="nav-title">
+
+        <span>TRADITIONAL BOARD GAME</span>
+
+        <strong>
+            Pallanguzhi
+        </strong>
+
+    </div>
+
+
+    <a
+        href="index.html"
+        class="back-button"
+    >
+        ← Games
+    </a>
+
+</header>
+
+
+<main class="page">
+
+    <!-- HEADER -->
+
+    <section class="game-header">
+
+        <div>
+
+            <span class="eyebrow">
+                CURIOS GAMES
+            </span>
+
+            <h1>
+                Pallan<span>guzhi</span>
+            </h1>
+
+            <p>
+                A traditional seed-and-pit game reimagined
+                as an interactive strategy challenge.
+            </p>
+
+        </div>
+
+
+        <div class="difficulty-box">
+
+            <label for="difficulty">
+                COMPUTER DIFFICULTY
+            </label>
+
+            <select id="difficulty">
+
+                <option value="easy">
+                    Easy
+                </option>
+
+                <option
+                    value="medium"
+                    selected
+                >
+                    Medium
+                </option>
+
+                <option value="hard">
+                    Hard
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAME -->
+
+    <section class="game-layout">
+
+        <div class="board-card">
+
+            <div class="turn-bar">
+
+                <span class="player-label">
+
+                    <i class="player-dot"></i>
+
+                    YOU
+
+                </span>
+
+
+                <strong id="turnLabel">
+                    Your Turn
+                </strong>
+
+
+                <span class="player-label">
+
+                    <i class="computer-dot"></i>
+
+                    COMPUTER
+
+                </span>
+
+            </div>
+
+
+            <div class="player-title">
+                COMPUTER PITS
+            </div>
+
+
+            <div
+                id="computerRow"
+                class="pit-row computer-row"
+            ></div>
+
+
+            <div class="middle-board">
+
+                <div class="middle-decoration">
+                    🪔
+                </div>
+
+                <div>
+
+                    <span>
+                        PALLANGUZHI
+                    </span>
+
+                    <strong>
+                        Seed • Sow • Strategize
+                    </strong>
+
+                </div>
+
+                <div class="middle-decoration">
+                    🪔
+                </div>
+
+            </div>
+
+
+            <div
+                id="playerRow"
+                class="pit-row player-row"
+            ></div>
+
+
+            <div class="player-title">
+                YOUR PITS
+            </div>
+
+
+            <div class="board-hint">
+
+                <span>
+                    Select one of your pits to sow its seeds.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDE PANEL -->
+
+        <aside class="control-panel">
+
+            <div class="score-card">
+
+                <div>
+
+                    <span>
+                        YOU
+                    </span>
+
+                    <strong id="playerScore">
+                        0
+                    </strong>
+
+                    <small>
+                        Seeds captured
+                    </small>
+
+                </div>
+
+
+                <div class="vs">
+                    VS
+                </div>
+
+
+                <div>
+
+                    <span>
+                        COMPUTER
+                    </span>
+
+                    <strong id="computerScore">
+                        0
+                    </strong>
+
+                    <small>
+                        Seeds captured
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-card">
+
+                <span class="panel-label">
+                    GAME STATUS
+                </span>
+
+                <div
+                    id="statusIcon"
+                    class="status-icon"
+                >
+                    🟤
+                </div>
+
+                <p id="statusText">
+                    Choose a pit to begin.
+                </p>
+
+            </div>
+
+
+            <div class="stats-card">
+
+                <div>
+
+                    <span>
+                        YOUR BOARD
+                    </span>
+
+                    <strong id="playerSeeds">
+                        35
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        AI BOARD
+                    </span>
+
+                    <strong id="computerSeeds">
+                        35
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="restartButton"
+                class="restart-button"
+            >
+                ↻ Restart Game
+            </button>
+
+
+            <div
+                id="thinking"
+                class="thinking"
+                hidden
+            >
+
+                <span class="spinner"></span>
+
+                <div>
+
+                    <strong>
+                        Computer is thinking...
+                    </strong>
+
+                    <small>
+                        Choosing a pit
+                    </small>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- CULTURAL SECTION -->
+
+    <section class="culture-section">
+
+        <div class="culture-card">
+
+            <span class="eyebrow">
+                CULTURAL DISCOVERY
+            </span>
+
+            <h2>
+                A game of
+                <span>seeds and strategy</span>
+            </h2>
+
+            <p>
+                Pallanguzhi is a traditional South Indian
+                seed-and-pit board game associated with
+                women's leisure and social play in several
+                regional traditions. Its rules can vary
+                between regions and communities.
+            </p>
+
+            <div class="culture-grid">
+
+                <div>
+
+                    <strong>
+                        01
+                    </strong>
+
+                    <h3>
+                        Sow
+                    </h3>
+
+                    <p>
+                        Distribute seeds from a selected pit
+                        around the board.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <h3>
+                        Capture
+                    </h3>
+
+                    <p>
+                        Strategic sowing can create
+                        opportunities to collect seeds.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <h3>
+                        Strategize
+                    </h3>
+
+                    <p>
+                        Plan your next move while watching
+                        the opponent's seed distribution.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <small class="adaptation">
+                CURIOS digital adaptation — simplified
+                browser rules for educational gameplay.
+            </small>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- RESULT -->
+
+<div
+    id="resultModal"
+    class="result-overlay"
+    hidden
+>
+
+    <div class="result-card">
+
+        <div
+            id="resultIcon"
+            class="result-icon"
+        >
+            🏆
+        </div>
+
+        <span class="eyebrow">
+            GAME COMPLETE
+        </span>
+
+        <h2 id="resultTitle">
+            You Win!
+        </h2>
+
+        <p id="resultText">
+            Congratulations!
+        </p>
+
+        <button
+            id="playAgain"
+            class="play-again"
+        >
+            Play Again
+        </button>
+
+        <a
+            href="index.html"
+            class="choose-game"
+        >
+            Choose Another Game
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer class="footer">
+
+    <span>
+        CURIOSO — Learn India Through Play
+    </span>
+
+    <a href="index.html">
+        ← Back to CURIOS Games
+    </a>
+
+</footer>
+
+
+<script src="pallanguzhi.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CURIOSO | Indian Heritage</title>
+
+    <link rel="stylesheet" href="Heritage.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        CURIOSO 🇮🇳
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#explore">Explore</a>
+        <a href="#story">History</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#quiz">Quiz</a>
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="tag">
+            INDIAN HERITAGE • HISTORY • ARCHITECTURE
+        </span>
+
+        <h1>
+            Stories Written in <span>Stone</span>
+        </h1>
+
+        <p>
+            Explore India's magnificent monuments, ancient
+            architecture and the stories hidden behind them.
+        </p>
+
+        <a href="#explore" class="hero-btn">
+            Explore Heritage ↓
+        </a>
+
+    </div>
+
+    <div class="hero-symbol">
+        🏛️
+    </div>
+
+</section>
+
+
+<!-- ================= EXPLORE ================= -->
+
+<section class="section" id="explore">
+
+    <div class="section-heading">
+
+        <span>EXPLORE INDIA</span>
+
+        <h2>
+            Discover India's Heritage
+        </h2>
+
+        <p>
+            Choose a monument and travel through its history.
+        </p>
+
+    </div>
+
+
+    <div class="heritage-buttons">
+
+    <button onclick="showHeritage('tirupatiTemple')">Tirupati Temple</button>
+    <button onclick="showHeritage('tawangMonastery')">Tawang Monastery</button>
+    <button onclick="showHeritage('rangGhar')">Rang Ghar</button>
+    <button onclick="showHeritage('nalanda')">Nalanda</button>
+    <button onclick="showHeritage('chitrakoteFalls')">Chitrakote Falls</button>
+    <button onclick="showHeritage('basilicaBomJesus')">Basilica of Bom Jesus</button>
+    <button onclick="showHeritage('raniKiVav')">Rani ki Vav</button>
+    <button onclick="showHeritage('rakhigarhi')">Rakhigarhi</button>
+    <button onclick="showHeritage('shimlaHeritage')">Shimla Heritage</button>
+    <button onclick="showHeritage('jagannathRanchi')">Jagannath Temple, Ranchi</button>
+    <button onclick="showHeritage('hampi')">Hampi</button>
+    <button onclick="showHeritage('padmanabhaswamyTemple')">Padmanabhaswamy Temple</button>
+    <button onclick="showHeritage('khajurahoTemples')">Khajuraho Temples</button>
+    <button onclick="showHeritage('ajantaCaves')">Ajanta Caves</button>
+    <button onclick="showHeritage('kanglaFort')">Kangla Fort</button>
+    <button onclick="showHeritage('livingRootBridges')">Living Root Bridges</button>
+    <button onclick="showHeritage('solomonsTemple')">Solomon's Temple</button>
+    <button onclick="showHeritage('kachariRuins')">Kachari Ruins</button>
+    <button onclick="showHeritage('konarkSunTemple')">Konark Sun Temple</button>
+    <button onclick="showHeritage('goldenTemple')">Golden Temple</button>
+    <button onclick="showHeritage('amerFort')">Amer Fort</button>
+    <button onclick="showHeritage('rumtekMonastery')">Rumtek Monastery</button>
+    <button onclick="showHeritage('brihadisvaraTemple')">Brihadisvara Temple</button>
+    <button onclick="showHeritage('charminar')">Charminar</button>
+    <button onclick="showHeritage('neermahal')">Neermahal</button>
+    <button onclick="showHeritage('tajMahal')">Taj Mahal</button>
+    <button onclick="showHeritage('kedarnathTemple')">Kedarnath Temple</button>
+    <button onclick="showHeritage('victoriaMemorial')">Victoria Memorial</button>
+
+</div>
+
+    <!-- Dynamic Monument -->
+
+    <div class="heritage-info" id="heritageInfo">
+
+        <div class="monument-icon">
+            🏛️
+        </div>
+
+        <div>
+
+            <h3>
+                Select a Heritage Site
+            </h3>
+
+            <p>
+                Click on any monument above to explore
+                its history and architecture.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STORY ================= -->
+
+<section class="story-section" id="story">
+
+    <div class="story-text">
+
+        <span class="small-title">
+            OUR SHARED LEGACY
+        </span>
+
+        <h2>
+            Heritage is More Than a Monument
+        </h2>
+
+        <p>
+            India's heritage represents centuries of
+            architecture, art, science, traditions and
+            cultural exchange.
+        </p>
+
+        <p>
+            From ancient cave temples to magnificent forts
+            and monuments, every site tells us something
+            about the people and civilisation that created it.
+        </p>
+
+        <div class="heritage-values">
+
+            <div>
+                <strong>🏛️</strong>
+                <span>Architecture</span>
+            </div>
+
+            <div>
+                <strong>📜</strong>
+                <span>History</span>
+            </div>
+
+            <div>
+                <strong>🎨</strong>
+                <span>Art</span>
+            </div>
+
+            <div>
+                <strong>🌏</strong>
+                <span>Culture</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="story-card">
+
+        <div class="story-icon">
+            🏰
+        </div>
+
+        <h3>
+            Preserve the Past
+        </h3>
+
+        <p>
+            Understanding heritage helps us appreciate
+            the knowledge and creativity of earlier
+            generations.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ARCHITECTURE ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span>LOOK CLOSER</span>
+
+        <h2>
+            What Makes Heritage Special?
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🧱
+            </div>
+
+            <h3>
+                Architecture
+            </h3>
+
+            <p>
+                Arches, domes, pillars, carvings and
+                structural designs reveal the engineering
+                knowledge of different periods.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎨
+            </div>
+
+            <h3>
+                Art & Carvings
+            </h3>
+
+            <p>
+                Sculptures, paintings and decorative
+                patterns preserve artistic traditions
+                from different regions.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📖
+            </div>
+
+            <h3>
+                Historical Stories
+            </h3>
+
+            <p>
+                Monuments connect us with rulers,
+                communities, religions, artists and
+                important events of the past.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TIMELINE ================= -->
+
+<section class="timeline-section" id="timeline">
+
+    <div class="section-heading">
+
+        <span>TIME TRAVEL</span>
+
+        <h2>
+            A Journey Through Indian History
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">
+                1
+            </div>
+
+            <div class="timeline-card">
+
+                <span>
+                    ANCIENT INDIA
+                </span>
+
+                <h3>
+                    Ajanta Caves
+                </h3>
+
+                <p>
+                    Ancient rock-cut caves known for
+                    Buddhist paintings and sculptures.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">
+                2
+            </div>
+
+            <div class="timeline-card">
+
+                <span>
+                    MEDIEVAL INDIA
+                </span>
+
+                <h3>
+                    Hampi
+                </h3>
+
+                <p>
+                    The ruins of the Vijayanagara capital
+                    preserve remarkable temples and
+                    architectural remains.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">
+                3
+            </div>
+
+            <div class="timeline-card">
+
+                <span>
+                    MEDIEVAL INDIA
+                </span>
+
+                <h3>
+                    Qutub Minar
+                </h3>
+
+                <p>
+                    A famous historic minaret complex
+                    in Delhi with distinctive architecture
+                    and inscriptions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">
+                4
+            </div>
+
+            <div class="timeline-card">
+
+                <span>
+                    MUGHAL PERIOD
+                </span>
+
+                <h3>
+                    Taj Mahal
+                </h3>
+
+                <p>
+                    A famous marble monument built in
+                    Agra and associated with Mughal
+                    architecture.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">
+                5
+            </div>
+
+            <div class="timeline-card">
+
+                <span>
+                    HISTORIC DELHI
+                </span>
+
+                <h3>
+                    Red Fort
+                </h3>
+
+                <p>
+                    A major historic fort complex in Delhi
+                    associated with the Mughal period.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= THEN VS NOW ================= -->
+
+<section class="compare-section">
+
+    <div class="section-heading">
+
+        <span>THEN & NOW</span>
+
+        <h2>
+            Heritage Through Time
+        </h2>
+
+        <p>
+            The way we experience monuments has changed,
+            but their stories continue.
+        </p>
+
+    </div>
+
+
+    <div class="compare-box">
+
+        <div class="compare-side">
+
+            <div class="compare-icon">
+                📜
+            </div>
+
+            <h3>
+                THEN
+            </h3>
+
+            <p>
+                Monuments were created as temples,
+                capitals, forts, tombs and cultural centres.
+            </p>
+
+        </div>
+
+
+        <div class="compare-arrow">
+            →
+        </div>
+
+
+        <div class="compare-side">
+
+            <div class="compare-icon">
+                📱
+            </div>
+
+            <h3>
+                NOW
+            </h3>
+
+            <p>
+                Today they are studied, protected and
+                visited as important cultural heritage.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DID YOU KNOW ================= -->
+
+<section class="fact-section">
+
+    <div class="fact-card">
+
+        <span>
+            💡 DID YOU KNOW?
+        </span>
+
+        <h2 id="fact">
+            India's heritage includes monuments,
+            archaeological sites and cultural traditions.
+        </h2>
+
+        <button onclick="newFact()">
+            Another Fact
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUIZ ================= -->
+
+<section class="quiz-section" id="quiz">
+
+    <div class="section-heading">
+
+        <span>
+            TEST YOUR KNOWLEDGE
+        </span>
+
+        <h2>
+            Heritage Quiz
+        </h2>
+
+        <p>
+            Answer correctly and earn Culture Points.
+        </p>
+
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="quiz-number" id="quizNumber">
+            Question 1 / 5
+        </div>
+
+
+        <h3 id="quizQuestion">
+            The Taj Mahal is located in which city?
+        </h3>
+
+
+        <div class="options">
+
+            <button onclick="checkAnswer(0)">
+                Delhi
+            </button>
+
+            <button onclick="checkAnswer(1)">
+                Agra
+            </button>
+
+            <button onclick="checkAnswer(2)">
+                Jaipur
+            </button>
+
+            <button onclick="checkAnswer(3)">
+                Lucknow
+            </button>
+
+        </div>
+
+
+        <p id="quizResult"></p>
+
+
+        <div class="score">
+            🏆 Heritage Points:
+            <span id="score">0</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        CURIOSO 🇮🇳
+    </div>
+
+    <p>
+        Learn India through Play • Discover • Explore • Preserve
+    </p>
+
+    <p class="copyright">
+        © 2026 CURIOSO | Indian Culture Learning Platform
+    </p>
+
+</footer>
+
+
+<script src="Heritage.js"></script>
+
+</body>
+</html>

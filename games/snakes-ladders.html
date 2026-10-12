@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Snakes & Ladders | CURIOS Games</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="snakes-ladders.css">
+</head>
+
+<body>
+
+<header class="game-nav">
+
+    <a href="index.html" class="brand">
+        <span class="brand-mark">C</span>
+
+        <span class="brand-text">
+            <strong>CURIOSO</strong>
+            <small>CURIOS GAMES</small>
+        </span>
+    </a>
+
+    <div class="nav-title">
+        <span>BOARD GAME</span>
+        <strong>Snakes & Ladders</strong>
+    </div>
+
+    <a href="index.html" class="back-button">
+        ← Games
+    </a>
+
+</header>
+
+
+<main class="game-page">
+
+    <!-- =========================
+         GAME HEADER
+    ========================== -->
+
+    <section class="game-heading">
+
+        <div>
+            <span class="eyebrow">CURIOS GAMES</span>
+
+            <h1>
+                Snakes &
+                <span>Ladders</span>
+            </h1>
+
+            <p>
+                Roll the dice, climb the ladders, avoid the snakes
+                and race the computer to the finish.
+            </p>
+        </div>
+
+        <div class="difficulty-box">
+
+            <span>DIFFICULTY</span>
+
+            <select id="difficultySelect">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GAME LAYOUT
+    ========================== -->
+
+    <section class="game-layout">
+
+        <!-- BOARD -->
+
+        <div class="board-card">
+
+            <div class="board-topbar">
+
+                <div class="player-indicator">
+                    <span class="player-dot"></span>
+                    You
+                </div>
+
+                <div id="turnMessage">
+                    Your turn
+                </div>
+
+                <div class="player-indicator computer">
+                    <span class="computer-dot"></span>
+                    Computer
+                </div>
+
+            </div>
+
+
+            <div
+                id="gameBoard"
+                class="game-board"
+                aria-label="Snakes and Ladders board"
+            ></div>
+
+
+            <div class="board-legend">
+
+                <div>
+                    <span class="legend-player"></span>
+                    You
+                </div>
+
+                <div>
+                    <span class="legend-computer"></span>
+                    Computer
+                </div>
+
+                <div>
+                    🪜 Ladder
+                </div>
+
+                <div>
+                    🐍 Snake
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDE PANEL -->
+
+        <aside class="game-panel">
+
+            <!-- SCORE -->
+
+            <div class="score-card">
+
+                <div class="score-player">
+
+                    <span>YOU</span>
+
+                    <strong id="playerPosition">
+                        0
+                    </strong>
+
+                    <small>Position</small>
+
+                </div>
+
+                <div class="vs">
+                    VS
+                </div>
+
+                <div class="score-player computer-score">
+
+                    <span>COMPUTER</span>
+
+                    <strong id="computerPosition">
+                        0
+                    </strong>
+
+                    <small>Position</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- DICE -->
+
+            <div class="dice-card">
+
+                <span class="panel-label">
+                    DICE
+                </span>
+
+                <div
+                    id="dice"
+                    class="dice"
+                    aria-label="Dice result"
+                >
+                    1
+                </div>
+
+                <p id="diceMessage">
+                    Roll the dice to begin.
+                </p>
+
+                <button
+                    id="rollButton"
+                    class="roll-button"
+                >
+                    🎲 Roll Dice
+                </button>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+
+            <div class="control-card">
+
+                <button
+                    id="restartButton"
+                    class="control-button"
+                >
+                    ↻ Restart
+                </button>
+
+                <button
+                    id="howToPlayButton"
+                    class="control-button"
+                >
+                    ? How to Play
+                </button>
+
+            </div>
+
+
+            <!-- GAME STATUS -->
+
+            <div
+                id="thinkingBox"
+                class="thinking-box"
+                hidden
+            >
+                <span class="thinking-dot"></span>
+
+                <div>
+                    <strong>Computer is thinking...</strong>
+                    <small>Choosing a move</small>
+                </div>
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- =========================
+         RESULT MODAL
+    ========================== -->
+
+    <div
+        id="resultModal"
+        class="result-overlay"
+        hidden
+    >
+
+        <div class="result-card">
+
+            <div id="resultIcon" class="result-icon">
+                🏆
+            </div>
+
+            <span class="eyebrow">
+                GAME COMPLETE
+            </span>
+
+            <h2 id="resultTitle">
+                You Win!
+            </h2>
+
+            <p id="resultText">
+                Congratulations!
+            </p>
+
+            <div class="result-actions">
+
+                <button
+                    id="playAgainButton"
+                    class="primary-button"
+                >
+                    Play Again
+                </button>
+
+                <a
+                    href="index.html"
+                    class="secondary-button"
+                >
+                    Choose Another Game
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         HOW TO PLAY
+    ========================== -->
+
+    <section class="information-section">
+
+        <div class="information-card">
+
+            <span class="eyebrow">
+                HOW TO PLAY
+            </span>
+
+            <h2>
+                Simple rules.
+                <span>Strategic fun.</span>
+            </h2>
+
+            <div class="rules-grid">
+
+                <div class="rule">
+                    <strong>01</strong>
+                    <p>
+                        Roll the dice on your turn.
+                    </p>
+                </div>
+
+                <div class="rule">
+                    <strong>02</strong>
+                    <p>
+                        Move your token forward by the dice number.
+                    </p>
+                </div>
+
+                <div class="rule">
+                    <strong>03</strong>
+                    <p>
+                        Landing at the bottom of a ladder moves
+                        you upward.
+                    </p>
+                </div>
+
+                <div class="rule">
+                    <strong>04</strong>
+                    <p>
+                        Landing on a snake sends you downward.
+                    </p>
+                </div>
+
+                <div class="rule">
+                    <strong>05</strong>
+                    <p>
+                        Reach square 100 to win.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CULTURAL NOTE -->
+
+        <div class="culture-note">
+
+            <div class="culture-icon">
+                🇮🇳
+            </div>
+
+            <div>
+
+                <span class="eyebrow">
+                    CULTURAL DISCOVERY
+                </span>
+
+                <h3>
+                    From Gyan Chaupar to digital play
+                </h3>
+
+                <p>
+                    Indian board-game traditions include historical
+                    forms of Snakes and Ladders known as
+                    <em>Gyan Chaupar</em>. Museum collections preserve
+                    Indian examples, including a 19th-century
+                    Pahari board.
+                </p>
+
+                <small>
+                    CURIOS digital version uses a modern 100-square
+                    ruleset for accessible gameplay.
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="game-footer">
+
+    <span>
+        CURIOSO — Learn India Through Play
+    </span>
+
+    <a href="index.html">
+        ← Back to CURIOS Games
+    </a>
+
+</footer>
+
+
+<script src="snakes-ladders.js"></script>
+
+</body>
+</html>
