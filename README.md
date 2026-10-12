@@ -7,9 +7,9 @@
 Our mission is to make Indian culture more accessible to everyone through interactive learning, engaging quizzes, beautiful visuals, and an immersive user experience.
 
 ---
-## 👨‍💻 Project Repository
+## 👨‍💻 Project
 
-**GitHub:** https://github.com/DevelopxYuvraj/CURIOSO
+**Live Server:** https://developxyuvraj.github.io/CURIOSO/
 ## 🌟 Features
 
 🎉 **Indian Festivals**  
